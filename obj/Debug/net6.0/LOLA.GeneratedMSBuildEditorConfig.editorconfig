@@ -1,0 +1,88 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LOLA
+build_property.RootNamespace = LOLA
+build_property.ProjectDir = c:\Users\dhood\Documents\LOLA\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\dhood\Documents\LOLA
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/dhood/Documents/LOLA/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/AdminLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/GetLunchTotal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2V0THVuY2hUb3RhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/RateLunch.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmF0ZUx1bmNoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/StartLunchOrder.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhcnRMdW5jaE9yZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/ViewLunchSelector.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld0x1bmNoU2VsZWN0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/ViewRatings.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1JhdGluZ3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-balb1f549j
+
+[c:/Users/dhood/Documents/LOLA/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rhgp554jea
+
+[c:/Users/dhood/Documents/LOLA/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/dhood/Documents/LOLA/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
