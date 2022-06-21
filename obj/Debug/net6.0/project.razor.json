@@ -12,39 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 1703475562,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Pages.GetLunchTotal",
-        "AssemblyName": "LOLA",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "GetLunchTotal"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Pages.GetLunchTotal"
-        }
-      },
-      {
-        "HashCode": -1295104289,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Pages.GetLunchTotal",
-        "AssemblyName": "LOLA",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Pages.GetLunchTotal"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Pages.GetLunchTotal",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1154293311,
         "Kind": "Components.Component",
         "Name": "LOLA.Pages.Login",
@@ -272,6 +239,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "LOLA.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1703475562,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Pages.GetLunchTotal",
+        "AssemblyName": "LOLA",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GetLunchTotal"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Pages.GetLunchTotal"
+        }
+      },
+      {
+        "HashCode": -1295104289,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Pages.GetLunchTotal",
+        "AssemblyName": "LOLA",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Pages.GetLunchTotal"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Pages.GetLunchTotal",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
