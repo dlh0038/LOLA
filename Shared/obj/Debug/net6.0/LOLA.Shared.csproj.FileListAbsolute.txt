@@ -10,3 +10,5 @@ C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\obj\Debug\net6.0\refint\LOLA.Shared.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.pdb
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\obj\Debug\net6.0\ref\LOLA.Shared.dll
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.runtimeconfig.json
+C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.genruntimeconfig.cache

@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using LOLA.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<OrderContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("OrderContextSQLite") 
+    ?? throw new InvalidOperationException("Connection string 'OrderContext' not found.")));
+
 
 var app = builder.Build();
 
