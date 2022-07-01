@@ -1,0 +1,221 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj",
+        "projectName": "LOLA.Client",
+        "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj",
+        "packagesPath": "C:\\Users\\dhood\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dhood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj": {
+                "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.6, 6.0.6]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj",
+        "projectName": "LOLA.Server",
+        "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj",
+        "packagesPath": "C:\\Users\\dhood\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dhood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj": {
+                "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj"
+              },
+              "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj": {
+                "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "projectName": "LOLA.Shared",
+        "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "packagesPath": "C:\\Users\\dhood\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dhood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

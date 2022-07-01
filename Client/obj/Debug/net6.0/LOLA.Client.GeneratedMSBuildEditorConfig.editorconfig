@@ -1,0 +1,67 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = LOLA.Client
+build_property.RootNamespace = LOLA.Client
+build_property.ProjectDir = C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Pages/AdminLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Pages/GetLunchTotal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2V0THVuY2hUb3RhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Pages/RateLunch.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmF0ZUx1bmNoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Pages/StartLunchOrder.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhcnRMdW5jaE9yZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Pages/ViewLunchSelector.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld0x1bmNoU2VsZWN0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Pages/ViewRatings.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1JhdGluZ3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-5zzoym06n1
+
+[C:/Users/dhood/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-vh7ccvz1lr
