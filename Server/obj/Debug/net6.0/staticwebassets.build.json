@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sfxxRkayETvaCGdtsnaN92xz+wlx1TRdwJjwjX8s1Xs=",
+  "Hash": "aE1RY8HMMQjWDmXdCeTc1jMfZARzAZsbQ/B2VX+KfB8=",
   "Source": "LOLA.Server",
   "BasePath": "_content/LOLA.Server",
   "Mode": "Default",
@@ -8068,6 +8068,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\wwwroot\\Lola.png",
+      "SourceId": "LOLA.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "Lola.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Lola.png"
     },
     {
       "Identity": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\wwwroot\\obiwan.jpg",
