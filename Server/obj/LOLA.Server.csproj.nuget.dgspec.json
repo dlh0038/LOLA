@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj": {}
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Server\\LOLA.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj": {
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Client\\LOLA.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj",
+        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Client\\LOLA.Client.csproj",
         "projectName": "LOLA.Client",
-        "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj",
-        "packagesPath": "C:\\Users\\dhood\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\obj\\",
+        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Client\\LOLA.Client.csproj",
+        "packagesPath": "C:\\Users\\ebuffey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dhood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ebuffey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +31,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj": {
-                "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj"
+              "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj": {
+                "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj"
               }
             }
           }
@@ -87,20 +87,20 @@
         }
       }
     },
-    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj": {
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Server\\LOLA.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj",
+        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Server\\LOLA.Server.csproj",
         "projectName": "LOLA.Server",
-        "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj",
-        "packagesPath": "C:\\Users\\dhood\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\obj\\",
+        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Server\\LOLA.Server.csproj",
+        "packagesPath": "C:\\Users\\ebuffey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dhood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ebuffey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -114,11 +114,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj": {
-                "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj"
+              "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Client\\LOLA.Client.csproj": {
+                "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Client\\LOLA.Client.csproj"
               },
-              "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj": {
-                "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj"
+              "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj": {
+                "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj"
               }
             }
           }
@@ -180,20 +180,20 @@
         }
       }
     },
-    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj": {
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj",
         "projectName": "LOLA.Shared",
-        "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj",
-        "packagesPath": "C:\\Users\\dhood\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "packagesPath": "C:\\Users\\ebuffey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\LOLA\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dhood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ebuffey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
