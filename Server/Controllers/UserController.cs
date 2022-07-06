@@ -13,12 +13,12 @@ namespace Server.Controllers
 
     public class UserController : ControllerBase
     {
-        private OrderContext _orderContext;
+        private DataContext _dataContext;
 
 //constructor 
-        public UserController(OrderContext orderContext)
+        public UserController(DataContext dataContext)
         {
-            _orderContext = orderContext;
+            _dataContext = dataContext;
         }
 
 //##############################################################################################
@@ -33,7 +33,7 @@ namespace Server.Controllers
         {
             System.Console.WriteLine("User has made it to controller");
             // checks if user is valid
-            User loggedInUser = await _orderContext.Users.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefaultAsync();
+            User loggedInUser = await _dataContext.Users.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefaultAsync();
 
             if (loggedInUser != null)
             {
@@ -53,9 +53,8 @@ namespace Server.Controllers
             }
             return await Task.FromResult(loggedInUser);
         }
-//##############################################################################################
-//get user
 
+//get user
         [HttpGet("getcurrentuser")] 
         public async Task<ActionResult<User>> GetCurrentUser()
         {
@@ -69,14 +68,26 @@ namespace Server.Controllers
             }
             return await Task.FromResult(currentUser);
         }
-//##############################################################################################
-//Logout user
 
+//Logout user
         [HttpGet("logoutuser")]
         public async Task<ActionResult<String>> LogOutUser()
         {
             await HttpContext.SignOutAsync();
             return "Success";
         } 
+
+//##############################################################################################
+
+// ADMIN METHODS for creating deleting and editing users
+
+//##############################################################################################
+// get all users from the server
+
+        [HttpGet("getallusers")]
+        public ActionResult<List<User>> GetAllUsers()
+        {
+            return _dataContext.Users.ToList();
+        }
     }
 }

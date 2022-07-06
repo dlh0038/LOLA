@@ -4559,35 +4559,332 @@
         }
       },
       {
-        "HashCode": -304072447,
+        "HashCode": 1866463346,
         "Kind": "Components.Component",
-        "Name": "LOLA.Client.Shared.NavMenu",
+        "Name": "LOLA.Client.Pages.Index",
         "AssemblyName": "LOLA.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Shared.NavMenu"
+          "Common.TypeName": "LOLA.Client.Pages.Index"
         }
       },
       {
-        "HashCode": 1267916157,
+        "HashCode": -1984483341,
         "Kind": "Components.Component",
-        "Name": "LOLA.Client.Shared.NavMenu",
+        "Name": "LOLA.Client.Pages.Index",
         "AssemblyName": "LOLA.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "LOLA.Client.Shared.NavMenu"
+            "TagName": "LOLA.Client.Pages.Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Shared.NavMenu",
+          "Common.TypeName": "LOLA.Client.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -572256568,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.AdminLogin",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AdminLogin"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.AdminLogin"
+        }
+      },
+      {
+        "HashCode": 1366175113,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.AdminLogin",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.AdminLogin"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.AdminLogin",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -158527362,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.EditUser",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "EditUser"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.EditUser"
+        }
+      },
+      {
+        "HashCode": -1339973697,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.EditUser",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.EditUser"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.EditUser",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1018989615,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.ViewLunchSelector",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ViewLunchSelector"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.ViewLunchSelector"
+        }
+      },
+      {
+        "HashCode": -1499976235,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.ViewLunchSelector",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.ViewLunchSelector"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.ViewLunchSelector",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1226542931,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.ViewRatings",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ViewRatings"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.ViewRatings"
+        }
+      },
+      {
+        "HashCode": -198338942,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.ViewRatings",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.ViewRatings"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.ViewRatings",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -721897079,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.RateLunch",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RateLunch"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.RateLunch"
+        }
+      },
+      {
+        "HashCode": -1348129256,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.RateLunch",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.RateLunch"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.RateLunch",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -2062500609,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.StartLunchOrder",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "StartLunchOrder"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.StartLunchOrder"
+        }
+      },
+      {
+        "HashCode": 334211402,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.StartLunchOrder",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.StartLunchOrder"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.StartLunchOrder",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -293719259,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.GetLunchTotal",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GetLunchTotal"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.GetLunchTotal"
+        }
+      },
+      {
+        "HashCode": -923799172,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.GetLunchTotal",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.GetLunchTotal"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.GetLunchTotal",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1602501639,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.Login",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Login"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.Login"
+        }
+      },
+      {
+        "HashCode": 471356918,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.Login",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.Login"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.Login",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1876735575,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.App",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.App"
+        }
+      },
+      {
+        "HashCode": 2063230527,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.App",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -4784,299 +5081,35 @@
         }
       },
       {
-        "HashCode": 1018989615,
+        "HashCode": -304072447,
         "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.ViewLunchSelector",
+        "Name": "LOLA.Client.Shared.NavMenu",
         "AssemblyName": "LOLA.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ViewLunchSelector"
+            "TagName": "NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.ViewLunchSelector"
+          "Common.TypeName": "LOLA.Client.Shared.NavMenu"
         }
       },
       {
-        "HashCode": -1499976235,
+        "HashCode": 1267916157,
         "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.ViewLunchSelector",
+        "Name": "LOLA.Client.Shared.NavMenu",
         "AssemblyName": "LOLA.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "LOLA.Client.Pages.ViewLunchSelector"
+            "TagName": "LOLA.Client.Shared.NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.ViewLunchSelector",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1226542931,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.ViewRatings",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ViewRatings"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.ViewRatings"
-        }
-      },
-      {
-        "HashCode": -198338942,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.ViewRatings",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Pages.ViewRatings"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.ViewRatings",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1866463346,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.Index",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.Index"
-        }
-      },
-      {
-        "HashCode": -1984483341,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.Index",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -721897079,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.RateLunch",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RateLunch"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.RateLunch"
-        }
-      },
-      {
-        "HashCode": -1348129256,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.RateLunch",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Pages.RateLunch"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.RateLunch",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -2062500609,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.StartLunchOrder",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "StartLunchOrder"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.StartLunchOrder"
-        }
-      },
-      {
-        "HashCode": 334211402,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.StartLunchOrder",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Pages.StartLunchOrder"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.StartLunchOrder",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -293719259,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.GetLunchTotal",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "GetLunchTotal"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.GetLunchTotal"
-        }
-      },
-      {
-        "HashCode": -923799172,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.GetLunchTotal",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Pages.GetLunchTotal"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.GetLunchTotal",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -572256568,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.AdminLogin",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "AdminLogin"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.AdminLogin"
-        }
-      },
-      {
-        "HashCode": 1366175113,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.AdminLogin",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Pages.AdminLogin"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.AdminLogin",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1602501639,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.Login",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Login"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.Login"
-        }
-      },
-      {
-        "HashCode": 471356918,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.Login",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Pages.Login"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.Login",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1876735575,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.App",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.App"
-        }
-      },
-      {
-        "HashCode": 2063230527,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.App",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.App",
+          "Common.TypeName": "LOLA.Client.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

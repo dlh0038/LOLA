@@ -10,9 +10,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LOLA.Server.Migrations
 {
-    [DbContext(typeof(OrderContext))]
-    [Migration("20220705193202_addingusers")]
-    partial class addingusers
+    [DbContext(typeof(DataContext))]
+    [Migration("20220706185643_datacontext")]
+    partial class datacontext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

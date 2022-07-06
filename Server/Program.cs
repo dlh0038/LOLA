@@ -12,9 +12,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<OrderContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("OrderContextSQLite") 
-    ?? throw new InvalidOperationException("Connection string 'OrderContext' not found.")));
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") 
+    ?? throw new InvalidOperationException("Connection string 'DataContext' not found.")));
 
 //enabling serverside auth
 builder.Services.AddAuthentication(options => 
