@@ -8,9 +8,9 @@ using LOLA.Shared;
 namespace LOLA.Server.Data
 {
 
-    public class OrderContext: DbContext
+    public class DataContext: DbContext
     {
-        public OrderContext(DbContextOptions<OrderContext> options):base(options)
+        public DataContext(DbContextOptions<DataContext> options):base(options)
         {
 
         }

@@ -4,7 +4,7 @@
 
 namespace LOLA.Server.Migrations
 {
-    public partial class addingusers : Migration
+    public partial class datacontext : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
