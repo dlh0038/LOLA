@@ -44,6 +44,19 @@
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
         }
       },
+      "Microsoft.AspNetCore.Components.Authorization/6.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "6.0.6",
+          "Microsoft.AspNetCore.Components": "6.0.6"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.Authorization.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.Authorization.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Components.Forms/6.0.6": {
         "type": "package",
         "dependencies": {
@@ -89,6 +102,15 @@
         },
         "build": {
           "build/net6.0/_._": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication/7.0.0-preview.5.22303.8": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props": {}
         }
       },
       "Microsoft.AspNetCore.Components.WebAssembly.Server/6.0.6": {
@@ -491,6 +513,21 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/6.0.0": {
@@ -1097,7 +1134,11 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "LOLA.Shared": "1.0.0",
-          "Microsoft.AspNetCore.Components.WebAssembly": "6.0.6"
+          "Microsoft.AspNetCore.Authorization": "6.0.6",
+          "Microsoft.AspNetCore.Components.Authorization": "6.0.6",
+          "Microsoft.AspNetCore.Components.WebAssembly": "6.0.6",
+          "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "7.0.0-preview.5.22303.8",
+          "Microsoft.Extensions.Http": "6.0.0"
         },
         "compile": {
           "bin/placeholder/LOLA.Client.dll": {}
@@ -1190,6 +1231,21 @@
         "microsoft.aspnetcore.components.analyzers.nuspec"
       ]
     },
+    "Microsoft.AspNetCore.Components.Authorization/6.0.6": {
+      "sha512": "OJqrDV/np13vzPIyzXK7+77sYz5JuWCx2hTB2yPh9rcwTqMS+TikIoVnL61IxT4ZTOGN6ANo9seyJJm8iMh0rQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.authorization/6.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net6.0/Microsoft.AspNetCore.Components.Authorization.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Components.Authorization.xml",
+        "microsoft.aspnetcore.components.authorization.6.0.6.nupkg.sha512",
+        "microsoft.aspnetcore.components.authorization.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Components.Forms/6.0.6": {
       "sha512": "FGppLMwZbsilbqQSWD/+bgiloeRyBZvQZ+q6L9tM8MlC3u/LGWF44xW5m1+13GtMg2j3d83cGDxydq1Fp8qK7Q==",
       "type": "package",
@@ -1235,6 +1291,26 @@
         "lib/net6.0/Microsoft.AspNetCore.Components.WebAssembly.xml",
         "microsoft.aspnetcore.components.webassembly.6.0.6.nupkg.sha512",
         "microsoft.aspnetcore.components.webassembly.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.WebAssembly.Authentication/7.0.0-preview.5.22303.8": {
+      "sha512": "I6W4KDdbEUQ7sA0B+86KreLNkNSqMzI0rcQDlfxUUId/bK8JBkMNPK7iTEE23fTR9cDToCpw/dQQJgw1c2BSbw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.webassembly.authentication/7.0.0-preview.5.22303.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props",
+        "buildTransitive/Microsoft.AspNetCore.Components.WebAssembly.Authentication.props",
+        "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+        "lib/net7.0/Microsoft.AspNetCore.Components.WebAssembly.Authentication.xml",
+        "microsoft.aspnetcore.components.webassembly.authentication.7.0.0-preview.5.22303.8.nupkg.sha512",
+        "microsoft.aspnetcore.components.webassembly.authentication.nuspec",
+        "staticwebassets/AuthenticationService.js"
       ]
     },
     "Microsoft.AspNetCore.Components.WebAssembly.Server/6.0.6": {
@@ -1857,6 +1933,25 @@
         "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
         "microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
         "microsoft.extensions.filesystemglobbing.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Http/6.0.0": {
+      "sha512": "15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "type": "package",
+      "path": "microsoft.extensions.http/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Http.dll",
+        "lib/net461/Microsoft.Extensions.Http.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
+        "microsoft.extensions.http.6.0.0.nupkg.sha512",
+        "microsoft.extensions.http.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -2968,6 +3063,8 @@
     "net6.0": [
       "LOLA.Client >= 1.0.0",
       "LOLA.Shared >= 1.0.0",
+      "Microsoft.AspNetCore.Components.Authorization >= 6.0.6",
+      "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 7.0.0-preview.5.22303.8",
       "Microsoft.AspNetCore.Components.WebAssembly.Server >= 6.0.6",
       "Microsoft.EntityFrameworkCore >= 6.0.6",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.6",
@@ -2976,23 +3073,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dhood\\.nuget\\packages\\": {},
+    "C:\\Users\\ebuffey\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj",
+      "projectUniqueName": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Server\\LOLA.Server.csproj",
       "projectName": "LOLA.Server",
-      "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\LOLA.Server.csproj",
-      "packagesPath": "C:\\Users\\dhood\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Server\\obj\\",
+      "projectPath": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Server\\LOLA.Server.csproj",
+      "packagesPath": "C:\\Users\\ebuffey\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dhood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ebuffey\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3006,11 +3103,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj": {
-              "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Client\\LOLA.Client.csproj"
+            "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Client\\LOLA.Client.csproj": {
+              "projectPath": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Client\\LOLA.Client.csproj"
             },
-            "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj": {
-              "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj"
+            "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Shared\\LOLA.Shared.csproj": {
+              "projectPath": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Shared\\LOLA.Shared.csproj"
             }
           }
         }
@@ -3025,6 +3122,14 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Components.Authorization": {
+            "target": "Package",
+            "version": "[6.0.6, )"
+          },
+          "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+            "target": "Package",
+            "version": "[7.0.0-preview.5.22303.8, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly.Server": {
             "target": "Package",
             "version": "[6.0.6, )"

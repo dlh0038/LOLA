@@ -12,3 +12,31 @@ C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\obj\Debug\net6.0\ref\LOLA.Shared.dll
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.runtimeconfig.json
 C:\Users\dhood\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.genruntimeconfig.cache
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.deps.json
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.runtimeconfig.json
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.dll
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.pdb
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.csproj.AssemblyReference.cache
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.AssemblyInfoInputs.cache
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.AssemblyInfo.cs
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.csproj.CoreCompileInputs.cache
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.dll
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\refint\LOLA.Shared.dll
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.pdb
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.genruntimeconfig.cache
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Shared\obj\Debug\net6.0\ref\LOLA.Shared.dll
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.deps.json
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.runtimeconfig.json
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.dll
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\bin\Debug\net6.0\LOLA.Shared.pdb
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.csproj.AssemblyReference.cache
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.AssemblyInfoInputs.cache
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.AssemblyInfo.cs
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.csproj.CoreCompileInputs.cache
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.dll
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\refint\LOLA.Shared.dll
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.pdb
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\LOLA.Shared.genruntimeconfig.cache
+C:\Users\ebuffey\VSCODE\LOLA\backup\LOLA\Shared\obj\Debug\net6.0\ref\LOLA.Shared.dll

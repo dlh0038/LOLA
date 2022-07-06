@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
+
 using LOLA.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +15,10 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<OrderContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("OrderContextSQLite") 
     ?? throw new InvalidOperationException("Connection string 'OrderContext' not found.")));
+
+//enabling serverside auth
+builder.Services.AddAuthentication(options => 
+options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(); 
 
 
 var app = builder.Build();
@@ -35,6 +42,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); // enables authentication capabilities
 
 app.MapRazorPages();
 app.MapControllers();

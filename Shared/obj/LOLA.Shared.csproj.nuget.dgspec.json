@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj": {}
+    "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Shared\\LOLA.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj": {
+    "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Shared\\LOLA.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Shared\\LOLA.Shared.csproj",
         "projectName": "LOLA.Shared",
-        "projectPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\LOLA.Shared.csproj",
-        "packagesPath": "C:\\Users\\dhood\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhood\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "packagesPath": "C:\\Users\\ebuffey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dhood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ebuffey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

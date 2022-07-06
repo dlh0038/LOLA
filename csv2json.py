@@ -17,9 +17,9 @@ def csv2json(csvFileContents, cols=[]):
     header = csvFileContents[0]
     contents = csvFileContents[1:]
     for row in contents:
-        temp="new Order{\n"
+        temp="{\n"
         for item in zip([header[x] for x in cols], [row[x] for x in cols]):
-            temp += f"\t{item[0]} = \"{item[1]}\",\n"
+            temp += f" \"{item[0]}\":\"{item[1]}\",\n"
         result += temp[:-2] + "\n},\n" #-2 index to remove last comma and newline
     return f"[\n{result[:-2]}\n]"    #-2 index to remove last comma and newline
 

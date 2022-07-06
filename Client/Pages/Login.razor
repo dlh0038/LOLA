@@ -1,5 +1,54 @@
-@page "/login"
+@page "/"
+@using LOLA.Shared
+@layout LoginLayout
+@inject HttpClient Http
+@using LOLA.Client.Services
+@inject ILoginClient _loginClient
+@inject NavigationManager _navigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider 
 
-<PageTitle>Login Page</PageTitle>
 
-<h1>Login Page</h1>
+<h2>Login</h2>
+
+<div class="row">
+    <div class="col col-6">
+        <input type="email" @bind-value="_loginClient.Email" class="form-control mb-3" placeholder="Email"/>
+        <input type="password" @bind-value="_loginClient.Password" class="form-control mb-3" placeholder="Password"/>
+        <p style="color:red; font-size:20px">@authMessage</p>
+        <button class="btn btn-block btn-primary" @onclick="LoginUser">Login</button>
+    </div>
+</div>
+
+@code
+{
+    [CascadingParameter] 
+    private Task<AuthenticationState> GetAuthenticationStateAsync { get; set; }  
+    private string authMessage;
+
+    private async Task LoginUser()
+    { 
+        var user1 = await _loginClient.LoginUser();
+
+        if (user1.Email != null && user1.Password != null) 
+        {
+
+            System.Console.WriteLine("User is not null");
+
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+            
+            System.Console.WriteLine("this should be true if user is authenticated: " + user.Identity.IsAuthenticated);
+
+            if(user.Identity.IsAuthenticated)
+            {
+                System.Console.WriteLine("User identified");
+                // go to home page
+                _navigationManager.NavigateTo("/home", true); 
+            }
+        }
+        else
+        {
+            authMessage = "Email or Password is incorrect!";
+        }
+    }
+}
