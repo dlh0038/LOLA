@@ -1,4 +1,4 @@
-Date,Selector,Restaurant,Name,Order,Total,Rating (0-5)
+Date,Selector,Restaurant,OrderName,OrderText,Total,Rating (0-5)
 25-May,Hani,Primanti's,Chris,,,
 25-May,Hani,Primanti's,Denny,,,
 25-May,Hani,Primanti's,Emilio,,,
