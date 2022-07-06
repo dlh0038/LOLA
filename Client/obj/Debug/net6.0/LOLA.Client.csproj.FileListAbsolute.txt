@@ -1860,3 +1860,11 @@ C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\
 C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\obj\Debug\net6.0\refint\LOLA.Client.dll
 C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\obj\Debug\net6.0\LOLA.Client.pdb
 C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\obj\Debug\net6.0\ref\LOLA.Client.dll
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Http.dll
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Http.dll.gz
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\obj\Debug\net6.0\build-gz\dgajN4Yq.gz
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Client\obj\Debug\net6.0\build-gz\hZEPrh+4.gz

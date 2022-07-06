@@ -1,17 +1,45 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager _navigationManager
+@using System.Security.Principal;
+@inject HttpClient _httpClient
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+ @* authorizeview only allows authenticated users to view the website *@
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
+ <AuthorizeView>
+    <Authorized>
+            <div class="page">
+                <div class="sidebar">
+                    <NavMenu />
+                </div>
+                <div class="main">
+                    <div class="top-row">
+                         <h4><b>@context.User.Identity.Name</b></h4>  
+                        <button class="btn btn-danger" @onclick="LogoutUser">Logout</button> 
+                    </div>
+                    <div class="content px-4">
+                        @Body
+                    </div>
+                </div>
+            </div>
+    </Authorized>
+    <NotAuthorized>
+        <h1>Authentication Failure!</h1>
+        <p style="color:red; font-size:18px">You're not signed in.</p>
+        <button class="btn btn-block btn-primary" @onclick="LoginPage">Back to Login</button>
+    </NotAuthorized>
+</AuthorizeView>  
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+
+@code{
+    private async Task LogoutUser()
+    {
+        //logout user 
+        await _httpClient.GetAsync("user/logoutuser");
+        _navigationManager.NavigateTo("/",true);
+    } 
+
+    private void LoginPage()
+    {
+        _navigationManager.NavigateTo("/");
+    }
+}

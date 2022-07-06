@@ -202,3 +202,4 @@ C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\
 C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Server\obj\Debug\net6.0\LOLA.Server.pdb
 C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Server\obj\Debug\net6.0\LOLA.Server.genruntimeconfig.cache
 C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Server\obj\Debug\net6.0\ref\LOLA.Server.dll
+C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\LOLA\Server\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
