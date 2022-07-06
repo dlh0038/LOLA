@@ -1,4 +1,5 @@
-Lunch Ordering Liason App (LOLA)
+# Lunch Ordering Liason App (LOLA)
+![LOLA](/Lola.png)
 
 first time setup:
     navigate to "C:\Users\<user>\AppData\Roaming\NuGet\NuGet.Config"
