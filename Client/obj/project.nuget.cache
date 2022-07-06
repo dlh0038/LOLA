@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZwJw0FK8YZ9rIaThLq03rCl8Xl7SeX319QAhlvPP2bqBcsgvxVZg8PN5TK5rYtuPNL5hyNqoS5EicYlSlL5WhQ==",
+  "dgSpecHash": "vw3Ncfj+q5udlucwstmgir32MFrMZdY2nCV9J4bVaKdQQDUFAZyLSy+WdEsuzJI760PB9rIc2NrMKiZ7OwB4og==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Client\\LOLA.Client.csproj",
+  "projectFilePath": "C:\\Users\\ebuffey\\VSCODE\\Master\\LOLA\\LOLA\\Client\\LOLA.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ebuffey\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.6\\microsoft.aspnetcore.authorization.6.0.6.nupkg.sha512",
     "C:\\Users\\ebuffey\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.6\\microsoft.aspnetcore.components.6.0.6.nupkg.sha512",

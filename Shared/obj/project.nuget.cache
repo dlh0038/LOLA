@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9ky1MDoVzqnMTNQf3a1PDIWoEVXv3DsvYxZgHCGvDCNPBYfekQa23eyUWpnSv+Pl58r09AgTp5pB4e6roE+u7Q==",
+  "dgSpecHash": "ykLrKS7/L4pPyjvwLMbYuyO4RqbirYMQ9Vdxd2W68b+54C5F/te/b7+KiBfDeChbETPvCDA82Re6Xfq7VUG9wQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Shared\\LOLA.Shared.csproj",
+  "projectFilePath": "C:\\Users\\ebuffey\\VSCODE\\Master\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ebuffey\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y5Q59LEoFkciCZZPaKa3iSE21c4J8fEJXSVQobC0VE7U3xE/hHCbRt9U6IapFAofn/D95OhEa0K4R+ycXbNeGA==",
+  "dgSpecHash": "lRsmtDuIi7pd1mVCLInNeVSYUX1TW8toLVs21HABPu+KZeW+VgBaLGL+2YTxvfbwbckXMJupPoByG195VGjjoQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ebuffey\\VSCODE\\LOLA\\backup\\LOLA\\Server\\LOLA.Server.csproj",
+  "projectFilePath": "C:\\Users\\ebuffey\\VSCODE\\Master\\LOLA\\LOLA\\Server\\LOLA.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ebuffey\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ebuffey\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.6\\microsoft.aspnetcore.authorization.6.0.6.nupkg.sha512",
