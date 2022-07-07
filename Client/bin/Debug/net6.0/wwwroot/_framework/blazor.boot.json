@@ -226,14 +226,14 @@
       "netstandard.dll": "sha256-yQ7oiuGXRX47V21EibXbfTPXOkJGOgCJhW9YF6e4hw0=",
       "System.Private.CoreLib.dll": "sha256-Ug2\/rd8Ck7Dls6uaZNmrqc7EvE8f41iX96qdX57LStQ=",
       "LOLA.Shared.dll": "sha256-ivpZNMak0DgjjdLXT0OdZkw0\/RuJFfPH2GA2UbKFbHk=",
-      "LOLA.Client.dll": "sha256-ilyHrUiCr4XxETki118R5t9jn8pJ+0ci4S4vOtLqoMM="
+      "LOLA.Client.dll": "sha256-k0GZAlbxyLAaSJSvGgYaVozYOBSgqgdFQJRKWC7j\/qQ="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "LOLA.Shared.pdb": "sha256-41nHc6zDfJKrOTvcyJUwYo0QB0CLgPhWENUOa41Cs5o=",
-      "LOLA.Client.pdb": "sha256-KBG3H4E4e5rynP15hVv2pN\/KkcV5O4fQ\/8L72L68FAc="
+      "LOLA.Client.pdb": "sha256-ftInRq8KRk20G3jTEFg55iU6I9RlwC3YrG9YmZVbQLM="
     },
     "runtime": {
       "dotnet.6.0.6.gtlv6n91nv.js": "sha256-zJXgw\/tAzTVOXksPhtpZVT12vxHC7S9mQyBRM36dwD0=",

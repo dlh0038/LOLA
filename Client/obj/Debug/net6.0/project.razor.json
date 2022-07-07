@@ -338,39 +338,6 @@
         }
       },
       {
-        "HashCode": 1764966256,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Shared.NavMenu",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -408151528,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Shared.NavMenu",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -726032471,
         "Kind": "Components.Component",
         "Name": "LOLA.Client.Shared.LoginLayout",
@@ -559,6 +526,39 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "LOLA.Client.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1764966256,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Shared.NavMenu",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -408151528,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Shared.NavMenu",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
