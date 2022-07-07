@@ -78,12 +78,6 @@
     private async Task SubmitUser()
     {
         errorMessage = "";
-        Console.WriteLine("submit user");
-        Console.WriteLine("add user");
-        Console.WriteLine("email: " + newUser.Email);
-        Console.WriteLine("password: " +newUser.Password);
-        Console.WriteLine("user: " + newUser);
-
         if(newUser.Email != null && newUser.Password != null &&  newUser.Email != "" && newUser.Password != "")
         {
             if(edit == false)
