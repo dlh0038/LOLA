@@ -83,11 +83,18 @@ namespace Server.Controllers
 
 //##############################################################################################
 // get all users from the server
-
         [HttpGet("getallusers")]
         public ActionResult<List<User>> GetAllUsers()
         {
             return _dataContext.Users.ToList();
+        }
+
+// get a single user
+// parameter  ID
+        [HttpGet("getsingleuser{id}")]
+        public ActionResult<User> GetUserById(int id)
+        {
+            return _dataContext.Users.FirstOrDefault(user => user.Id == id);
         }
     }
 }

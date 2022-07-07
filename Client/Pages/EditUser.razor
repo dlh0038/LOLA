@@ -8,9 +8,60 @@
 <div class="row">
     <div class="col col-6">
         @* @bind-bind-value="" *@
-        <input type="text" class="form-control mb-3" placeholder="Name">
-        <input type="email" class="form-control mb-3" placeholder="Email"/>
-        <input type="text" class="form-control mb-3" placeholder="Password">
+        <input type="text" @bind-value="newUser.Password" class="form-control mb-3" placeholder="Name">
+        <input type="email" @bind-value="newUser.Email" class="form-control mb-3" placeholder="Email"/>
+        <input type="text" @bind-value="newUser.Password" class="form-control mb-3" placeholder="Password">
         <button class="btn btn-block btn-primary">Create</button>
-    </div>
+
+        @if (users == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in users)
+                    {
+                        <tr>
+                            <td>@user.Id</td>
+                            <td>@user.Name</td>
+                            <td>@user.Email</td>
+                            <td>@user.Password</td>
+                            @* <td>
+                                <button @onclick="@(()=>GetUser(@user.Id))" class="btn btn-sm btn-primary" >Edit</button>
+                            </td>
+                            <td>
+                                <button @onclick="@(()=>DeleteUser(@user.Id))" class="btn btn-sm btn-primary">Delete</button>
+                            </td> *@
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+   </div>
 </div>
+
+@code {
+    #nullable enable
+    private User[]? users;
+    private User newUser = new User();
+    private bool edit = false;
+
+// getting all users
+//the OnInitialexAsync is used to handle incomplete async actions at render
+    protected override async Task OnInitializedAsync()
+    {
+        users = await Http.GetFromJsonAsync<User[]>("user/getallusers");
+    } 
+}

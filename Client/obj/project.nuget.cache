@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SQYD8KTi3qSHqGuTOchVuPk70CKbbk9L0BAJ0YSzau94ghvAxVhvocq2hStS9Dc0d5gFpExXeovjohjNt3gdhA==",
+  "dgSpecHash": "RzCzWedxVwVgTd6cXVwzw/eWww6hdjB2TXwj0+BQ2v0LSzA/F56MBPziJ+zD2RaFlUB1xvHQpiwV3aC1ihmmPQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Client\\LOLA.Client.csproj",
   "expectedPackageFiles": [
@@ -76,8 +76,7 @@
     "C:\\Users\\ebuffey\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\ebuffey\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\ebuffey\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\ebuffey\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
-    "C:\\Users\\ebuffey\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.6\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.6.nupkg.sha512"
+    "C:\\Users\\ebuffey\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
