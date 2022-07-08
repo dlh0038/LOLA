@@ -12,6 +12,7 @@
         <input type="text" @bind-value="newUser.Password" class="form-control mb-3" placeholder="Password">
         <p style="color:red; font-size:20px">@errorMessage</p>
         <button class="btn btn-block btn-primary" @onclick="SubmitUser">Submit</button>
+         <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
 
         @if (users == null)
         {
@@ -97,7 +98,6 @@
             else
             {
                 Console.WriteLine("edit user");
-
                 await Http.PutAsJsonAsync<User>("user/"+newUser.Id,newUser);
                 await OnInitializedAsync();
                 edit = false;
@@ -108,6 +108,19 @@
         {
             errorMessage = "Email and Password Required!";
         }
+    }
+
+// used to set user back to empty if cancel is clicked
+    private async Task Cancel()
+    {
+        edit = false;
+        Console.WriteLine("user: " + newUser.Name);
+        newUser.Name = "";
+        newUser.Email = "";
+        newUser.Password = "";
+        errorMessage = "";
+        newUser = new User();
+        await OnInitializedAsync();
     }
 
 // delete user 
@@ -122,8 +135,14 @@
     {
         if(deleteConfirmed)
         {
+            edit = false;
             Console.WriteLine("id = " + userid.ToString()); 
             await Http.DeleteAsync("user/"+userid.ToString());
+            newUser.Name = "";
+            newUser.Email = "";
+            newUser.Password = "";
+            errorMessage = "";
+            newUser = new User();
             await OnInitializedAsync();
         }
     }

@@ -8,126 +8,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -1035165883,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.Confirm",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Confirm"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "ConfirmationTitle",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "ConfirmationTitle"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "ConfirmationMessage",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "ConfirmationMessage"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "ConfirmationChanged",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Boolean>",
-            "Metadata": {
-              "Common.PropertyName": "ConfirmationChanged",
-              "Components.EventCallback": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.Confirm"
-        }
-      },
-      {
-        "HashCode": -1106321902,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.Confirm",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Pages.Confirm"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "ConfirmationTitle",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "ConfirmationTitle"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "ConfirmationMessage",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "ConfirmationMessage"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "ConfirmationChanged",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Boolean>",
-            "Metadata": {
-              "Common.PropertyName": "ConfirmationChanged",
-              "Components.EventCallback": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.Confirm",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 2084666842,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.EditUser",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "EditUser"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.EditUser"
-        }
-      },
-      {
-        "HashCode": -2129217850,
-        "Kind": "Components.Component",
-        "Name": "LOLA.Client.Pages.EditUser",
-        "AssemblyName": "LOLA.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "LOLA.Client.Pages.EditUser"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "LOLA.Client.Pages.EditUser",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1726315091,
         "Kind": "Components.Component",
         "Name": "LOLA.Client.Pages.ViewLunchSelector",
@@ -388,6 +268,126 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "LOLA.Client.Pages.AdminLogin",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1035165883,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.Confirm",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Confirm"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "ConfirmationTitle",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ConfirmationTitle"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ConfirmationMessage",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ConfirmationMessage"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ConfirmationChanged",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Boolean>",
+            "Metadata": {
+              "Common.PropertyName": "ConfirmationChanged",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.Confirm"
+        }
+      },
+      {
+        "HashCode": -1106321902,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.Confirm",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.Confirm"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "ConfirmationTitle",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ConfirmationTitle"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ConfirmationMessage",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ConfirmationMessage"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ConfirmationChanged",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Boolean>",
+            "Metadata": {
+              "Common.PropertyName": "ConfirmationChanged",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.Confirm",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 2084666842,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.EditUser",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "EditUser"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.EditUser"
+        }
+      },
+      {
+        "HashCode": -2129217850,
+        "Kind": "Components.Component",
+        "Name": "LOLA.Client.Pages.EditUser",
+        "AssemblyName": "LOLA.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LOLA.Client.Pages.EditUser"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "LOLA.Client.Pages.EditUser",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
