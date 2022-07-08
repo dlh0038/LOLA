@@ -11,65 +11,69 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = LOLA.Client
 build_property.RootNamespace = LOLA.Client
-build_property.ProjectDir = C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Repo\emilio_UsersAddDeleteEditView\LOLA\LOLA\Client\
+build_property.ProjectDir = c:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Repo\emilio_UsersAddDeleteEditViews\LOLA\Client\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Repo\emilio_UsersAddDeleteEditView\LOLA\LOLA\Client
+build_property.MSBuildProjectDirectory = c:\Users\ebuffey\OneDrive - Federal Bureau of Investigation\Documents\LOLA\Repo\emilio_UsersAddDeleteEditViews\LOLA\Client
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/App.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Pages/AdminLogin.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/AdminLogin.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5Mb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Pages/EditUser.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/Confirm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZmlybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/EditUser.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFVzZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Pages/GetLunchTotal.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/GetLunchTotal.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2V0THVuY2hUb3RhbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Pages/Index.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Pages/Login.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Pages/RateLunch.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/RateLunch.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmF0ZUx1bmNoLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Pages/StartLunchOrder.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/StartLunchOrder.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhcnRMdW5jaE9yZGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Pages/ViewLunchSelector.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/ViewLunchSelector.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld0x1bmNoU2VsZWN0b3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Pages/ViewRatings.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Pages/ViewRatings.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1JhdGluZ3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Shared/LoginLayout.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Shared/LoginLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/_Imports.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Shared/MainLayout.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-5zzoym06n1
 
-[C:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditView/LOLA/LOLA/Client/Shared/NavMenu.razor]
+[c:/Users/ebuffey/OneDrive - Federal Bureau of Investigation/Documents/LOLA/Repo/emilio_UsersAddDeleteEditViews/LOLA/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-vh7ccvz1lr

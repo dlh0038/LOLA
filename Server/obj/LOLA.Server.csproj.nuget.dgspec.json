@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Server\\LOLA.Server.csproj": {}
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Server\\LOLA.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Client\\LOLA.Client.csproj": {
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Client\\LOLA.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Client\\LOLA.Client.csproj",
+        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Client\\LOLA.Client.csproj",
         "projectName": "LOLA.Client",
-        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Client\\LOLA.Client.csproj",
+        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Client\\LOLA.Client.csproj",
         "packagesPath": "C:\\Users\\ebuffey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Client\\obj\\",
+        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj": {
-                "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj"
+              "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj": {
+                "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj"
               }
             }
           }
@@ -97,14 +97,14 @@
         }
       }
     },
-    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Server\\LOLA.Server.csproj": {
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Server\\LOLA.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Server\\LOLA.Server.csproj",
+        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Server\\LOLA.Server.csproj",
         "projectName": "LOLA.Server",
-        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Server\\LOLA.Server.csproj",
+        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Server\\LOLA.Server.csproj",
         "packagesPath": "C:\\Users\\ebuffey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Server\\obj\\",
+        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -124,11 +124,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Client\\LOLA.Client.csproj": {
-                "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Client\\LOLA.Client.csproj"
+              "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Client\\LOLA.Client.csproj": {
+                "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Client\\LOLA.Client.csproj"
               },
-              "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj": {
-                "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj"
+              "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj": {
+                "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj"
               }
             }
           }
@@ -198,14 +198,14 @@
         }
       }
     },
-    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj": {
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj",
         "projectName": "LOLA.Shared",
-        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj",
         "packagesPath": "C:\\Users\\ebuffey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

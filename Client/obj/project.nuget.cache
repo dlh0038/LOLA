@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RzCzWedxVwVgTd6cXVwzw/eWww6hdjB2TXwj0+BQ2v0LSzA/F56MBPziJ+zD2RaFlUB1xvHQpiwV3aC1ihmmPQ==",
+  "dgSpecHash": "GusD4lsk4mptjAMo1MZMwNyZCCaumdBi+o/W6uc8642t1fbLgT1oYjH2UOUe4kaRTth0F+VJEhbuf1Q5QL+rAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Client\\LOLA.Client.csproj",
+  "projectFilePath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Client\\LOLA.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ebuffey\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.6\\microsoft.aspnetcore.authorization.6.0.6.nupkg.sha512",
     "C:\\Users\\ebuffey\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.6\\microsoft.aspnetcore.components.6.0.6.nupkg.sha512",

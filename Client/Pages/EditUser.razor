@@ -42,7 +42,8 @@
                                 <button @onclick="@(()=>GetUserById(@user.Id))" class="btn btn-sm btn-primary" >Edit</button>
                             </td>
                             <td>
-                                <button @onclick="@(()=>DeleteUser(@user.Id))" class="btn btn-sm btn-primary">Delete</button>
+                                @* <button @onclick="@(()=>DeleteUser(@user.Id))" class="btn btn-sm btn-primary">Delete</button> *@
+                                <button @onclick="@(()=>DeleteUser(@user.Id,user.Email))" class="btn btn-sm btn-primary">Delete</button>
                             </td> 
                         </tr>
                     }
@@ -52,12 +53,19 @@
    </div>
 </div>
 
+@* when delete is clicked this confirm modal will popup*@
+<Confirm ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation"></Confirm>
+
+
 @code {
     #nullable enable
     private User[]? users;
     private User newUser = new User();
     private string errorMessage = string.Empty;
     private bool edit = false;  // if true add user if false edit user
+    protected Confirm DeleteConfirmation { get; set; } // reference to show delete confirm
+    protected Confirm ConfirmDeleteClicked { get; set; }
+    protected int userid = 0;
 
 // getting all users
 //the OnInitialexAsync is used to handle incomplete async actions at render
@@ -103,9 +111,20 @@
     }
 
 // delete user 
-    private async Task DeleteUser(int id)
+    protected async void DeleteUser(int id, string email)
     {
-        await Http.DeleteAsync("user/"+id.ToString());
-        await OnInitializedAsync();
+        userid = id;  // userid is local variable used to pass the id of user being deleted 
+        Console.WriteLine("id = " + id.ToString());
+        DeleteConfirmation.Show(id,email);
+    }
+
+    protected async Task ConfirmDelete_Click(bool deleteConfirmed)
+    {
+        if(deleteConfirmed)
+        {
+            Console.WriteLine("id = " + userid.ToString()); 
+            await Http.DeleteAsync("user/"+userid.ToString());
+            await OnInitializedAsync();
+        }
     }
 }

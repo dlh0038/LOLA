@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj": {}
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj": {
+    "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj",
         "projectName": "LOLA.Shared",
-        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\LOLA.Shared.csproj",
+        "projectPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\LOLA.Shared.csproj",
         "packagesPath": "C:\\Users\\ebuffey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditView\\LOLA\\LOLA\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\ebuffey\\OneDrive - Federal Bureau of Investigation\\Documents\\LOLA\\Repo\\emilio_UsersAddDeleteEditViews\\LOLA\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
