@@ -13,12 +13,12 @@ namespace Server.Controllers
 
     public class UserController : ControllerBase
     {
-        private OrderContext _orderContext;
+        private DataContext _dataContext;
 
 //constructor 
-        public UserController(OrderContext orderContext)
+        public UserController(DataContext dataContext)
         {
-            _orderContext = orderContext;
+            _dataContext = dataContext;
         }
 
 //##############################################################################################
@@ -28,55 +28,100 @@ namespace Server.Controllers
 //##############################################################################################
 //User login, used on client side in pages-login.razor when login button is hit
         
-        [HttpPost("loginuser")] //parameter
+        [HttpPost("loginuser")]
         public async Task<ActionResult<User>> LoginUser(User user)
         {
             System.Console.WriteLine("User has made it to controller");
             // checks if user is valid
-            User loggedInUser = await _orderContext.Users.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefaultAsync();
+            User loggedInUser = await _dataContext.Users.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefaultAsync();
 
             if (loggedInUser != null)
             {
-                //create a claim
+                //create a claim, claimsIdentity, claimsPrincipal,
                 var claim = new Claim(ClaimTypes.Name, loggedInUser.Email);    
-
-                //create claimsIdentity
                 var claimsIdentity = new ClaimsIdentity(new[] { claim }, "serverAuth");
-                //create claimsPrincipal
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-                //Sign In User
-                await HttpContext.SignInAsync(claimsPrincipal);
-            }
+                
+                await HttpContext.SignInAsync(claimsPrincipal);//Sign In User
+            }                                                  //default scheme for signing in
             else
             {
                 return BadRequest();
             }
             return await Task.FromResult(loggedInUser);
         }
-//##############################################################################################
-//get user
 
+//get user
         [HttpGet("getcurrentuser")] 
         public async Task<ActionResult<User>> GetCurrentUser()
         {
             System.Console.WriteLine("inside get current user method ");
             User currentUser = new User();
-
+            //if true 
             if (User.Identity.IsAuthenticated)
             {
-                //gets logged in users email
-                currentUser.Email = User.FindFirstValue(ClaimTypes.Name);
-            }
-            return await Task.FromResult(currentUser);
+                currentUser.Email = User.FindFirstValue(ClaimTypes.Name);  //gets logged in users email
+            }                                                              //The claim value for the first claim with the specified type; 
+            return await Task.FromResult(currentUser);                     //otherwise, null if the value doesn’t exist.
         }
-//##############################################################################################
-//Logout user
 
+//Logout user
         [HttpGet("logoutuser")]
         public async Task<ActionResult<String>> LogOutUser()
         {
-            await HttpContext.SignOutAsync();
+            await HttpContext.SignOutAsync();   //default scheme for signing out
             return "Success";
         } 
+
+//##############################################################################################
+
+// ADMIN METHODS for creating deleting and editing users
+
+//##############################################################################################
+// get all users from the server
+        [HttpGet("getallusers")]
+        public ActionResult<List<User>> GetAllUsers()
+        {
+            return _dataContext.Users.ToList();
+        }
+
+// get a single user
+// parameter  ID
+        [HttpGet("{id}")]
+        public ActionResult<User> GetUserById(int id)
+        {
+            return _dataContext.Users.FirstOrDefault(user => user.Id == id);
+        }
+
+// initiates an action on the server
+        [HttpPost("postuser")]
+        public ActionResult<User> PostUser(User user)
+        {
+            _dataContext.Users.Add(user);
+            _dataContext.SaveChanges();
+            return user;
+        }
+
+// update an existing resource (user)
+        [HttpPut("{id}")]
+        public ActionResult<User> PutUser(int id, User user)
+        {
+            User newUser = _dataContext.Users.FirstOrDefault(user => user.Id == id);
+            newUser.Name = user.Name;
+            newUser.Email = user.Email;
+            newUser.Password = user.Password;
+            _dataContext.SaveChanges();
+            return newUser;
+
+        }
+
+// delete user from server
+        [HttpDelete("{id}")]
+        public void DeleteUser(int id)
+        {
+            User oldUser = _dataContext.Users.FirstOrDefault(user => user.Id == id);
+            _dataContext.Users.Remove(oldUser);
+            _dataContext.SaveChanges();
+        }
     }
 }
