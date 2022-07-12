@@ -1,0 +1,61 @@
+@*This is just to have something here. Definitley isn't a wheel. :( *@
+@page "/wheelofrestaurants"
+@using System;
+@using System.Collections.Generic;
+@using System.Collections.ObjectModel;
+
+<PageTitle> Wheel of Restaurants | LOLA</PageTitle>
+
+<ol>
+    @foreach (var restaurant in restaurants)
+    {
+        <li>
+            <h3>@restaurant.Title</h3>
+        </li>
+    }
+</ol>
+
+<input placeholder="Restaurant Name" @bind="newRestaurant" />
+<button @onclick="AddRestaurant">Add To List</button>
+<br><br>
+<button @onclick="ChooseRestaurant">Random Pick</button> 
+<h3></h3>
+
+
+
+@code {
+    private ObservableCollection<RestaurantItem> restaurants = new();    
+    private string newRestaurant;
+    bool RandomPickActive = false;
+    object ChosenRestauraunt;
+
+    private void AddRestaurant()
+    {
+        if (!string.IsNullOrWhiteSpace(newRestaurant))
+        {
+            restaurants.Add(new RestaurantItem { Title = newRestaurant });
+            newRestaurant = string.Empty;
+        }
+    }
+
+    private void ChooseRestaurant()
+    {
+        RandomPickActive = true;
+        var random = new Random();
+        int index = random.Next(restaurants.Count);
+        ChosenRestauraunt = restaurants[index].Title;
+    }
+
+    public class RestaurantItem
+    {
+        public string? Title { get; set; }
+    }
+}
+    
+
+    @if(RandomPickActive)
+    {
+        <br>
+        <h3>The Restaurant chosen is:</h3>
+        <h2>@ChosenRestauraunt</h2>
+    }
