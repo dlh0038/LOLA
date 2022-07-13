@@ -109,6 +109,7 @@ namespace Server.Controllers
             newUser.Name = user.Name;
             newUser.Email = user.Email;
             newUser.Password = user.Password;
+            newUser.Role = user.Role;
             _dataContext.SaveChanges();
             return newUser;
 
