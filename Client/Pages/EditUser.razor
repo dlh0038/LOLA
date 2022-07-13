@@ -12,11 +12,11 @@
 
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Edit Permissions
+                @editpermissions
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a @bind="newUser.Role" class="dropdown-item">Admin</a></li>
-                <li><a @bind="newUser.Role" class="dropdown-item">User</a></li>
+                <li><a class="dropdown-item" @onclick="AddAdminRole">Admin</a></li>
+                <li><a class="dropdown-item" @onclick="AddUserRole">User</a></li>
             </ul>
         </div>
 
@@ -55,7 +55,6 @@
                                 <button @onclick="@(()=>GetUserById(@user.Id))" class="btn btn-sm btn-primary" >Edit</button>
                             </td>
                             <td>
-                                @* <button @onclick="@(()=>DeleteUser(@user.Id))" class="btn btn-sm btn-primary">Delete</button> *@
                                 <button @onclick="@(()=>DeleteUser(@user.Id,user.Email))" class="btn btn-sm btn-primary">Delete</button>
                             </td> 
                         </tr>
@@ -75,6 +74,7 @@
     private User[]? users;
     private User newUser = new User();
     private string errorMessage = string.Empty;
+    private string editpermissions = "Edit Permissions";
     private bool edit = false;  // if true add user if false edit user
     protected Confirm DeleteConfirmation { get; set; } // reference to show delete confirm
     protected Confirm ConfirmDeleteClicked { get; set; }
@@ -98,8 +98,10 @@
 // add or edit user 
     private async Task SubmitUser()
     {
+        editpermissions = "Edit Permissions";
         errorMessage = "";
-        if(newUser.Email != null && newUser.Password != null &&  newUser.Email != "" && newUser.Password != "")
+        if(newUser.Email != null && newUser.Password != null && newUser.Role!= null &&  
+           newUser.Email != "" && newUser.Password != "" && newUser.Role!= "")
         {
             if(edit == false)
             {
@@ -109,7 +111,7 @@
             }
             else
             {
-                Console.WriteLine("edit user");
+                Console.WriteLine("NewUserRole = " + newUser.Role);
                 await Http.PutAsJsonAsync<User>("user/"+newUser.Id,newUser);
                 await OnInitializedAsync();
                 edit = false;
@@ -118,19 +120,16 @@
         }
         else
         {
-            errorMessage = "Email and Password Required!";
+            errorMessage = "Email, Password and Permissions Required!";
         }
     }
 
 // used to set user back to empty if cancel is clicked
     private async Task Cancel()
     {
+        editpermissions = "Edit Permissions";
         edit = false;
-        Console.WriteLine("user: " + newUser.Name);
-        newUser.Name = "";
-        newUser.Email = "";
-        newUser.Password = "";
-        errorMessage = "";
+        errorMessage = ""; 
         newUser = new User();
         await OnInitializedAsync();
     }
@@ -150,12 +149,22 @@
             edit = false;
             Console.WriteLine("id = " + userid.ToString()); 
             await Http.DeleteAsync("user/"+userid.ToString());
-            newUser.Name = "";
-            newUser.Email = "";
-            newUser.Password = "";
+            editpermissions = "Edit Permissions";
             errorMessage = "";
             newUser = new User();
             await OnInitializedAsync();
         }
+    }
+
+//change role to either admin or user
+    protected async void AddAdminRole()
+    {
+        editpermissions = "Admin";
+        newUser.Role = "Admin";
+    }
+    protected async void AddUserRole()
+    {
+        editpermissions = "User";
+        newUser.Role = "User";
     }
 }
