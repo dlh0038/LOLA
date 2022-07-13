@@ -1,5 +1,4 @@
 @page "/edituser"
-
 @using LOLA.Shared;
 @inject HttpClient Http;
 
@@ -10,9 +9,20 @@
         <input type="text" @bind-value="newUser.Name" class="form-control mb-3" placeholder="Name">
         <input type="email" @bind-value="newUser.Email" class="form-control mb-3" placeholder="Email"/>
         <input type="text" @bind-value="newUser.Password" class="form-control mb-3" placeholder="Password">
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Edit Permissions
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a @bind="newUser.Role" class="dropdown-item">Admin</a></li>
+                <li><a @bind="newUser.Role" class="dropdown-item">User</a></li>
+            </ul>
+        </div>
+
         <p style="color:red; font-size:20px">@errorMessage</p>
         <button class="btn btn-block btn-primary" @onclick="SubmitUser">Submit</button>
-         <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+        <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
 
         @if (users == null)
         {
@@ -27,6 +37,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Password</th>
+                        <th>Role</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -39,6 +50,7 @@
                             <td>@user.Name</td>
                             <td>@user.Email</td>
                             <td>@user.Password</td>
+                            <td>@user.Role</td>
                             <td>
                                 <button @onclick="@(()=>GetUserById(@user.Id))" class="btn btn-sm btn-primary" >Edit</button>
                             </td>

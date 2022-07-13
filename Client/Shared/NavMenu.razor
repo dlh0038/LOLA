@@ -8,64 +8,71 @@
 </div>
 
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="home" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="viewlunchselector">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> View Lunch Selector
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="startlunchorder">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Start Lunch Order
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="getlunchtotal">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Get Lunch Total
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="ratelunch">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Rate Lunch
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="viewratings">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> View Ratings
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="countdowntimer">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> <i>Countdown Timer</i>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="wheelofrestaurants">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> <i>Wheel of Restaurants</i>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="viewaggregateratings">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> <i>View Aggregate Ratings</i>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="adminlogin">
-                <span class="oi oi-lock-locked" aria-hidden="true"></span> Admin Login
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="edituser">
-                <span class="oi oi-aperture" aria-hidden="true"></span> Edit Users
-            </NavLink>
-        </div>
+        <nav class="flex-column">
+            <AuthorizeView Roles="Admin, User"> 
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="home" Match="NavLinkMatch.All">
+                        <span class="oi oi-home" aria-hidden="true"></span> Home
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="viewlunchselector">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> View Lunch Selector
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="startlunchorder">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Start Lunch Order
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="getlunchtotal">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Get Lunch Total
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="ratelunch">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Rate Lunch
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="viewratings">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> View Ratings
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="countdowntimer">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> <i>Countdown Timer</i>
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="wheelofrestaurants">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> <i>Wheel of Restaurants</i>
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="viewaggregateratings">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> <i>View Aggregate Ratings</i>
+                    </NavLink>
+                </div>
+            </AuthorizeView> 
+            @* ONLY ADMIN CAN SEE THESE NAV ITEMS *@
+            <AuthorizeView Roles="Admin">   
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="adminpage">
+                        <span class="oi oi-lock-locked" aria-hidden="true"></span> Admin
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="edituser">
+                        <span class="oi oi-aperture" aria-hidden="true"></span> Edit Users
+                    </NavLink>
+                </div>
+            </AuthorizeView>  
     </nav>
 </div>
+
+
 
 @code {
     private bool collapseNavMenu = true;

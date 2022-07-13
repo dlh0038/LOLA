@@ -9,7 +9,6 @@ namespace LOLA.Client.Services
     {
         public string Email { get; set; }
         public string Password { get; set; }
-
         private HttpClient _httpClient;
         public LoginClient()
         {
@@ -24,7 +23,7 @@ namespace LOLA.Client.Services
 //calling the web api and returning a user 
         public async Task<User> LoginUser()
         {
-            var response = await _httpClient.PostAsJsonAsync("user/loginuser", this);
+            var response = await _httpClient.PostAsJsonAsync("user/loginuser", this); 
             return  await response.Content.ReadFromJsonAsync<User>();  
         }
 
