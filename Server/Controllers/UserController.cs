@@ -5,16 +5,15 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Server.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
-
+    [Route("[controller]")]
     public class UserController : ControllerBase
     {
         private DataContext _dataContext;
-
 //constructor 
         public UserController(DataContext dataContext)
         {
@@ -22,12 +21,9 @@ namespace Server.Controllers
         }
 
 //##############################################################################################
-
 //AUTHENTICATION METHODS
-
 //##############################################################################################
 //User login, used on client side in pages-login.razor when login button is hit
-        
         [HttpPost("loginuser")]
         public async Task<ActionResult<User>> LoginUser(User user)
         {
@@ -37,9 +33,11 @@ namespace Server.Controllers
 
             if (loggedInUser != null)
             {
+                System.Console.WriteLine("=======--------------------User Role = " + loggedInUser.Role);
                 //create a claim, claimsIdentity, claimsPrincipal,
-                var claim = new Claim(ClaimTypes.Name, loggedInUser.Email);    
-                var claimsIdentity = new ClaimsIdentity(new[] { claim }, "serverAuth");
+                var claim = new Claim(ClaimTypes.Name, loggedInUser.Email);
+                var claimRole = new Claim (ClaimTypes.Role, loggedInUser.Role == null ? "" : loggedInUser.Role); 
+                var claimsIdentity = new ClaimsIdentity(new[] { claim , claimRole }, "serverAuth");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                 
                 await HttpContext.SignInAsync(claimsPrincipal);//Sign In User
@@ -55,14 +53,16 @@ namespace Server.Controllers
         [HttpGet("getcurrentuser")] 
         public async Task<ActionResult<User>> GetCurrentUser()
         {
-            System.Console.WriteLine("inside get current user method ");
             User currentUser = new User();
             //if true 
             if (User.Identity.IsAuthenticated)
             {
-                currentUser.Email = User.FindFirstValue(ClaimTypes.Name);  //gets logged in users email
-            }                                                              //The claim value for the first claim with the specified type; 
-            return await Task.FromResult(currentUser);                     //otherwise, null if the value doesn’t exist.
+                //The claim value for the first claim with the specified type;
+                //otherwise, null if the value doesn’t exist. 
+                currentUser.Email = User.FindFirstValue(ClaimTypes.Name);
+                currentUser.Role = User.FindFirstValue(ClaimTypes.Role);
+            }                                                              
+            return await Task.FromResult(currentUser);                     
         }
 
 //Logout user
@@ -74,9 +74,7 @@ namespace Server.Controllers
         } 
 
 //##############################################################################################
-
 // ADMIN METHODS for creating deleting and editing users
-
 //##############################################################################################
 // get all users from the server
         [HttpGet("getallusers")]
@@ -110,6 +108,7 @@ namespace Server.Controllers
             newUser.Name = user.Name;
             newUser.Email = user.Email;
             newUser.Password = user.Password;
+            newUser.Role = user.Role;
             _dataContext.SaveChanges();
             return newUser;
 

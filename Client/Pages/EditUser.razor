@@ -1,68 +1,87 @@
 @page "/edituser"
-
 @using LOLA.Shared;
 @inject HttpClient Http;
 
-<h1>Create a new User</h1>
 
-<div class="row">
-    <div class="col col-6">
-        <input type="text" @bind-value="newUser.Name" class="form-control mb-3" placeholder="Name">
-        <input type="email" @bind-value="newUser.Email" class="form-control mb-3" placeholder="Email"/>
-        <input type="text" @bind-value="newUser.Password" class="form-control mb-3" placeholder="Password">
-        <p style="color:red; font-size:20px">@errorMessage</p>
-        <button class="btn btn-block btn-primary" @onclick="SubmitUser">Submit</button>
-         <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        <h1>Create a new User</h1>
 
-        @if (users == null)
-        {
-            <p><em>Loading...</em></p>
-        }
-        else
-        {
-            <table class="table table-responsive">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Password</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var user in users)
-                    {
-                        <tr>
-                            <td>@user.Id</td>
-                            <td>@user.Name</td>
-                            <td>@user.Email</td>
-                            <td>@user.Password</td>
-                            <td>
-                                <button @onclick="@(()=>GetUserById(@user.Id))" class="btn btn-sm btn-primary" >Edit</button>
-                            </td>
-                            <td>
-                                @* <button @onclick="@(()=>DeleteUser(@user.Id))" class="btn btn-sm btn-primary">Delete</button> *@
-                                <button @onclick="@(()=>DeleteUser(@user.Id,user.Email))" class="btn btn-sm btn-primary">Delete</button>
-                            </td> 
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        }
-   </div>
-</div>
+        <div class="row">
+            <div class="col col-6">
+                <input type="text" @bind-value="newUser.Name" class="form-control mb-3" placeholder="Name">
+                <input type="email" @bind-value="newUser.Email" class="form-control mb-3" placeholder="Email"/>
+                <input type="text" @bind-value="newUser.Password" class="form-control mb-3" placeholder="Password">
 
-@* when delete is clicked this confirm modal will popup*@
-<Confirm ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation"></Confirm>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        @editpermissions
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" @onclick="AddAdminRole">Admin</a></li>
+                        <li><a class="dropdown-item" @onclick="AddUserRole">User</a></li>
+                    </ul>
+                </div>
 
+                <p style="color:red; font-size:20px">@errorMessage</p>
+                <button class="btn btn-block btn-primary" @onclick="SubmitUser">Submit</button>
+                <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+
+                @if (users == null)
+                {
+                    <p><em>Loading...</em></p>
+                }
+                else
+                {
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                                <th>Role</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in users)
+                            {
+                                <tr>
+                                    <td>@user.Id</td>
+                                    <td>@user.Name</td>
+                                    <td>@user.Email</td>
+                                    <td>@user.Password</td>
+                                    <td>@user.Role</td>
+                                    <td>
+                                        <button @onclick="@(()=>GetUserById(@user.Id))" class="btn btn-sm btn-primary" >Edit</button>
+                                    </td>
+                                    <td>
+                                        <button @onclick="@(()=>DeleteUser(@user.Id,user.Email))" class="btn btn-sm btn-primary">Delete</button>
+                                    </td> 
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+        </div>
+        </div>
+
+        @* when delete is clicked this confirm modal will popup*@
+        <Confirm ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation"></Confirm>
+    </Authorized>
+    <NotAuthorized>
+        <h3>Not authorized</h3>
+    </NotAuthorized>
+</AuthorizeView>
 
 @code {
     #nullable enable
     private User[]? users;
     private User newUser = new User();
     private string errorMessage = string.Empty;
+    private string editpermissions = "Edit Permissions";
     private bool edit = false;  // if true add user if false edit user
     protected Confirm DeleteConfirmation { get; set; } // reference to show delete confirm
     protected Confirm ConfirmDeleteClicked { get; set; }
@@ -86,8 +105,10 @@
 // add or edit user 
     private async Task SubmitUser()
     {
+        editpermissions = "Edit Permissions";
         errorMessage = "";
-        if(newUser.Email != null && newUser.Password != null &&  newUser.Email != "" && newUser.Password != "")
+        if(newUser.Email != null && newUser.Password != null && newUser.Role!= null &&  
+           newUser.Email != "" && newUser.Password != "" && newUser.Role!= "")
         {
             if(edit == false)
             {
@@ -97,7 +118,7 @@
             }
             else
             {
-                Console.WriteLine("edit user");
+                Console.WriteLine("NewUserRole = " + newUser.Role);
                 await Http.PutAsJsonAsync<User>("user/"+newUser.Id,newUser);
                 await OnInitializedAsync();
                 edit = false;
@@ -106,19 +127,16 @@
         }
         else
         {
-            errorMessage = "Email and Password Required!";
+            errorMessage = "Email, Password and Permissions Required!";
         }
     }
 
 // used to set user back to empty if cancel is clicked
     private async Task Cancel()
     {
+        editpermissions = "Edit Permissions";
         edit = false;
-        Console.WriteLine("user: " + newUser.Name);
-        newUser.Name = "";
-        newUser.Email = "";
-        newUser.Password = "";
-        errorMessage = "";
+        errorMessage = ""; 
         newUser = new User();
         await OnInitializedAsync();
     }
@@ -138,12 +156,22 @@
             edit = false;
             Console.WriteLine("id = " + userid.ToString()); 
             await Http.DeleteAsync("user/"+userid.ToString());
-            newUser.Name = "";
-            newUser.Email = "";
-            newUser.Password = "";
+            editpermissions = "Edit Permissions";
             errorMessage = "";
             newUser = new User();
             await OnInitializedAsync();
         }
+    }
+
+//change role to either admin or user
+    protected async void AddAdminRole()
+    {
+        editpermissions = "Admin";
+        newUser.Role = "Admin";
+    }
+    protected async void AddUserRole()
+    {
+        editpermissions = "User";
+        newUser.Role = "User";
     }
 }

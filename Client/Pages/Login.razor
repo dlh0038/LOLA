@@ -7,9 +7,8 @@
 @inject NavigationManager _navigationManager
 @inject AuthenticationStateProvider AuthenticationStateProvider 
 
-
 <h2>Login</h2>
-
+ 
 <div class="row">
     <div class="col col-6">
         <input type="email" @bind-value="_loginClient.Email" class="form-control mb-3" placeholder="Email"/>
@@ -24,23 +23,28 @@
     [CascadingParameter] 
     private Task<AuthenticationState> GetAuthenticationStateAsync { get; set; }  
     private string authMessage;
-
+   
     private async Task LoginUser()
     { 
-        var user1 = await _loginClient.LoginUser();
+        var loggingInUser = await _loginClient.LoginUser();
 
-        if (user1.Email != null && user1.Password != null) 
+
+        if (loggingInUser.Email != null && loggingInUser.Password != null)  
         {
-
-            System.Console.WriteLine("User is not null");
-
-            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();  //gets current user claims
             var user = authState.User;
+
+            if(user.IsInRole("Admin"))
+                Console.WriteLine("I am Admin fear me!!");
+            else if (user.IsInRole("User"))
+                Console.WriteLine("I am user.");
+            else
+                Console.WriteLine("I do not have a role! ");
             
             System.Console.WriteLine("this should be true if user is authenticated: " + user.Identity.IsAuthenticated);
 
-            if(user.Identity.IsAuthenticated)
-            {
+            if(user.Identity.IsAuthenticated) // makes sure user is a valid user 
+            { 
                 System.Console.WriteLine("User identified");
                 // go to home page
                 _navigationManager.NavigateTo("/home", true); 
@@ -51,4 +55,4 @@
             authMessage = "Email or Password is incorrect!";
         }
     }
-}
+} 

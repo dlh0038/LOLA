@@ -1,5 +1,11 @@
-@page "/adminlogin"
+@page "/adminpage"
 
-<PageTitle>Admin Page</PageTitle>
-
-<h1>Admin Login Page</h1>
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        <PageTitle>Admin Page</PageTitle>
+        <h1>Admin Page</h1>
+    </Authorized> 
+    <NotAuthorized>
+        <h3>Not authorized</h3>
+    </NotAuthorized>
+</AuthorizeView>
