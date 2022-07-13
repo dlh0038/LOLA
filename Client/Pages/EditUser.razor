@@ -2,72 +2,79 @@
 @using LOLA.Shared;
 @inject HttpClient Http;
 
-<h1>Create a new User</h1>
 
-<div class="row">
-    <div class="col col-6">
-        <input type="text" @bind-value="newUser.Name" class="form-control mb-3" placeholder="Name">
-        <input type="email" @bind-value="newUser.Email" class="form-control mb-3" placeholder="Email"/>
-        <input type="text" @bind-value="newUser.Password" class="form-control mb-3" placeholder="Password">
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        <h1>Create a new User</h1>
 
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                @editpermissions
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" @onclick="AddAdminRole">Admin</a></li>
-                <li><a class="dropdown-item" @onclick="AddUserRole">User</a></li>
-            </ul>
+        <div class="row">
+            <div class="col col-6">
+                <input type="text" @bind-value="newUser.Name" class="form-control mb-3" placeholder="Name">
+                <input type="email" @bind-value="newUser.Email" class="form-control mb-3" placeholder="Email"/>
+                <input type="text" @bind-value="newUser.Password" class="form-control mb-3" placeholder="Password">
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        @editpermissions
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" @onclick="AddAdminRole">Admin</a></li>
+                        <li><a class="dropdown-item" @onclick="AddUserRole">User</a></li>
+                    </ul>
+                </div>
+
+                <p style="color:red; font-size:20px">@errorMessage</p>
+                <button class="btn btn-block btn-primary" @onclick="SubmitUser">Submit</button>
+                <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+
+                @if (users == null)
+                {
+                    <p><em>Loading...</em></p>
+                }
+                else
+                {
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                                <th>Role</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in users)
+                            {
+                                <tr>
+                                    <td>@user.Id</td>
+                                    <td>@user.Name</td>
+                                    <td>@user.Email</td>
+                                    <td>@user.Password</td>
+                                    <td>@user.Role</td>
+                                    <td>
+                                        <button @onclick="@(()=>GetUserById(@user.Id))" class="btn btn-sm btn-primary" >Edit</button>
+                                    </td>
+                                    <td>
+                                        <button @onclick="@(()=>DeleteUser(@user.Id,user.Email))" class="btn btn-sm btn-primary">Delete</button>
+                                    </td> 
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+        </div>
         </div>
 
-        <p style="color:red; font-size:20px">@errorMessage</p>
-        <button class="btn btn-block btn-primary" @onclick="SubmitUser">Submit</button>
-        <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
-
-        @if (users == null)
-        {
-            <p><em>Loading...</em></p>
-        }
-        else
-        {
-            <table class="table table-responsive">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Password</th>
-                        <th>Role</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var user in users)
-                    {
-                        <tr>
-                            <td>@user.Id</td>
-                            <td>@user.Name</td>
-                            <td>@user.Email</td>
-                            <td>@user.Password</td>
-                            <td>@user.Role</td>
-                            <td>
-                                <button @onclick="@(()=>GetUserById(@user.Id))" class="btn btn-sm btn-primary" >Edit</button>
-                            </td>
-                            <td>
-                                <button @onclick="@(()=>DeleteUser(@user.Id,user.Email))" class="btn btn-sm btn-primary">Delete</button>
-                            </td> 
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        }
-   </div>
-</div>
-
-@* when delete is clicked this confirm modal will popup*@
-<Confirm ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation"></Confirm>
-
+        @* when delete is clicked this confirm modal will popup*@
+        <Confirm ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation"></Confirm>
+    </Authorized>
+    <NotAuthorized>
+        <h3>Not authorized</h3>
+    </NotAuthorized>
+</AuthorizeView>
 
 @code {
     #nullable enable

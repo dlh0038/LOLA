@@ -36,7 +36,7 @@ namespace Server.Controllers
                 System.Console.WriteLine("=======--------------------User Role = " + loggedInUser.Role);
                 //create a claim, claimsIdentity, claimsPrincipal,
                 var claim = new Claim(ClaimTypes.Name, loggedInUser.Email);
-                var claimRole = new Claim (ClaimTypes.Role, loggedInUser.Role == null ? "" : loggedInUser.Role);  
+                var claimRole = new Claim (ClaimTypes.Role, loggedInUser.Role == null ? "" : loggedInUser.Role); 
                 var claimsIdentity = new ClaimsIdentity(new[] { claim , claimRole }, "serverAuth");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                 
@@ -57,7 +57,6 @@ namespace Server.Controllers
             //if true 
             if (User.Identity.IsAuthenticated)
             {
-                //gets logged in users email
                 //The claim value for the first claim with the specified type;
                 //otherwise, null if the value doesn’t exist. 
                 currentUser.Email = User.FindFirstValue(ClaimTypes.Name);
