@@ -77,8 +77,8 @@
     private User newUser = new User();
     private string errorMessage = string.Empty;
     private bool edit = false;  // if true add user if false edit user
-    protected Confirm DeleteConfirmation { get; set; } // reference to show delete confirm
-    protected Confirm ConfirmDeleteClicked { get; set; }
+    protected Confirm? DeleteConfirmation { get; set; } // reference to show delete confirm
+    protected Confirm? ConfirmDeleteClicked { get; set; }
     protected int userid = 0;
 
 // getting all users
@@ -134,7 +134,7 @@
     }
 
 // delete user 
-    protected async void DeleteUser(int id, string email)
+    protected void DeleteUser(int id, string email)
     {
         userid = id;  // userid is local variable used to pass the id of user being deleted 
         Console.WriteLine("id = " + id.ToString());

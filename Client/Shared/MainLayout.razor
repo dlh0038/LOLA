@@ -2,40 +2,40 @@
 @inject NavigationManager _navigationManager
 @using System.Security.Principal;
 @inject HttpClient _httpClient
+@using Telerik.Blazor.Components.RootComponent
 
  @* authorizeview only allows authenticated users to view the website *@
 
+<TelerikRootComponent>
+    <AuthorizeView Roles="Admin, User"> 
+        <Authorized>
+            <MudThemeProvider/>
+            <MudDialogProvider/>
+            <MudSnackbarProvider/>
+                <div class="page">
+                    <div class="sidebar">
+                        <NavMenu />
+                    </div>
 
-
- <AuthorizeView Roles="Admin, User">
-    <Authorized>
-        <MudThemeProvider/>
-        <MudDialogProvider/>
-        <MudSnackbarProvider/>
-            <div class="page">
-                <div class="sidebar">
-                    <NavMenu />
+                    <main>
+                        <div class="top-row">
+                            <h4><b>@context.User.Identity.Name</b></h4>
+                            <button class="btn btn-danger" @onclick="LogoutUser">Logout</button> 
+                        </div>
+                        
+                        <div class="content px-4">
+                            @Body
+                        </div>
+                    </main>
                 </div>
-
-                <main>
-                    <div class="top-row">
-                         <h4><b>@context.User.Identity.Name</b></h4>
-                        <button class="btn btn-danger" @onclick="LogoutUser">Logout</button> 
-                    </div>
-                    
-                    <div class="content px-4">
-                        @Body
-                    </div>
-                </main>
-            </div>
-    </Authorized>
-    <NotAuthorized>
-        <h1>Authentication Failure!</h1>
-        <p style="color:red; font-size:18px">You're not signed in.</p>
-        <button class="btn btn-block btn-primary" @onclick="LoginPage">Back to Login</button>
-    </NotAuthorized>
-</AuthorizeView>  
-
+        </Authorized>
+        <NotAuthorized>
+            <h1>Authentication Failure!</h1>
+            <p style="color:red; font-size:18px">You're not signed in.</p>
+            <button class="btn btn-block btn-primary" @onclick="LoginPage">Back to Login</button>
+        </NotAuthorized>
+    </AuthorizeView>  
+</TelerikRootComponent>
 
 @code{
     private async Task LogoutUser()
