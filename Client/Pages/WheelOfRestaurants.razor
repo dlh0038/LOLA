@@ -1,61 +1,64 @@
-@*This is just to have something here. Definitley isn't a wheel. :( *@
+@*This is just to have something here. Definitley isn't a wheel :( *@
 @page "/wheelofrestaurants"
 @using System;
-@using System.Collections.Generic;
-@using System.Collections.ObjectModel;
+@inject HttpClient Http;
 
 <PageTitle> Wheel of Restaurants | LOLA</PageTitle>
+<h1>Randomly Select a Restaurant</h1><br>
 
-<ol>
+@if(restaurants != null)
+{
+    <ol>
     @foreach (var restaurant in restaurants)
     {
-        <li>
-            <h3>@restaurant.Title</h3>
-        </li>
+        
+        <div class="row">
+        <li><h3>@restaurant.Name</h3></li>
+        @*This is for if we needed to remove a restaurant from consideration*@
+        @*<button @onclick="@(()=>HideRestaurant(@restaurant.Id))">X</button></li>*@
+        </div>
     }
-</ol>
-
-<input placeholder="Restaurant Name" @bind="newRestaurant" />
-<button @onclick="AddRestaurant">Add To List</button>
-<br><br>
-<button @onclick="ChooseRestaurant">Random Pick</button> 
-<h3></h3>
-
-
+    </ol>  
+}
+else
+{
+    <h4>Error: No restaurants in database! </h4>
+}
+<button @onclick="ChooseRestaurant" class="btn btn-sm btn-primary">Random Pick</button> 
 
 @code {
-    private ObservableCollection<RestaurantItem> restaurants = new();    
-    private string newRestaurant;
+    #nullable enable
+    private Restaurant[]? restaurants;
+    private Restaurant newRestaurant = new Restaurant();
     bool RandomPickActive = false;
-    object ChosenRestauraunt;
+    private string ChosenRestauraunt;
 
-    private void AddRestaurant()
+    protected override async Task OnInitializedAsync()
     {
-        if (!string.IsNullOrWhiteSpace(newRestaurant))
-        {
-            restaurants.Add(new RestaurantItem { Title = newRestaurant });
-            newRestaurant = string.Empty;
-        }
+        restaurants = await Http.GetFromJsonAsync<Restaurant[]>("restaurant/getallrestaurants");
+    } 
+
+    private async Task GetRestaurantrByRID(int id)
+    {
+        newRestaurant = await Http.GetFromJsonAsync<Restaurant>("restaurant/" + id.ToString());
+    }
+
+    protected async void HideRestaurant(int id)
+    {
+        //This is left empty becuase I'm not sure if there's even a point for users to not consider/hide a restaurant
     }
 
     private void ChooseRestaurant()
     {
         RandomPickActive = true;
         var random = new Random();
-        int index = random.Next(restaurants.Count);
-        ChosenRestauraunt = restaurants[index].Title;
-    }
-
-    public class RestaurantItem
-    {
-        public string? Title { get; set; }
+        int index = random.Next(restaurants.Length);
+        ChosenRestauraunt = restaurants[index].Name;
     }
 }
-    
-
-    @if(RandomPickActive)
+     @if(RandomPickActive)
     {
-        <br>
+        <br><br>
         <h3>The Restaurant chosen is:</h3>
-        <h2>@ChosenRestauraunt</h2>
+        <h1>@ChosenRestauraunt</h1>
     }

@@ -9,10 +9,8 @@
     //This calculates the seconds until 12:00 the next wednesday
     int seconds_remaining = Math.Abs(43200 - ((3600 * DateTime.Now.Hour) + (60 * DateTime.Now.Minute) + DateTime.Now.Second) + ((((int) DayOfWeek.Wednesday - (int) DateTime.Today.DayOfWeek + 7) % 7) * 86400));
     private static Timer aTimer;
-    
-    bool test = false; //Remove later
-    bool test2 = true; //In place for the Bools(?) that will tell if user has reviewed order
-
+    bool rating_period = false;
+   
     protected override void OnInitialized()
     {
         aTimer = new Timer(1000);
@@ -22,7 +20,12 @@
 
     public void CountDownTimer(Object source, System.Timers.ElapsedEventArgs e)
     {
-        if (seconds_remaining > 0)
+        if(DateTime.Now.DayOfWeek == DayOfWeek.Wednesday && DateTime.Now.TimeOfDay > new TimeSpan(12,0,0))
+        {
+            aTimer.Enabled = false;
+            rating_period = true;
+        }
+        else 
         {
             seconds_remaining -= 1;
             sr_duplicate = seconds_remaining;
@@ -35,39 +38,26 @@
             minutes = sr_duplicate / 60 ;
      
             sr_duplicate %= 60;
-            seconds = sr_duplicate;
-            
-        }
-        else if(DateTime.Now.DayOfWeek.Equals("Wednesday") && DateTime.Now.TimeOfDay > new TimeSpan(12,0,0)) //If it is Wednesday and it is past lunch
-        {
-            aTimer.Enabled = false;
+            seconds = sr_duplicate;   
         }
         InvokeAsync(StateHasChanged);
     }
 }
 
-@if (seconds_remaining >= 0){
-    //Align this for single vs double digits
-    <h1>Time to Next Lunch Order</h1>
-    <br>
-    <h4>@days Days</h4>
-    <h4>@hours Hours</h4>
-    <h4>@minutes Minutes</h4>
-    <h4>@seconds Seconds</h4>
-}
-else if(test2)//Change to check bool(?) if meal has not been rated(?)
+@if(rating_period)//Change to check bool(?) if meal has not been rated(?)
 {
     <h1>Time is up!</h1>
     <h3>Make sure to rate your meal for today!</h3>
     //Include Name of resturaunt and person who chose resturaunt
-    //^For this, similar to @context.User.Identity.Name -> might use id#?
     <button onclick="location.href='/ratelunch'" type="button">
         Rate your meal here</button>
 }
-else
-{
-    //If time is past and meal has been rated
-    <h1>Thanks for rating your meal!</h1>
-    //Conditional statement like:
-    //Gld you enjoyed your meal/Maybe try something different next time?/
+else if(seconds_remaining > 0){
+    //Align this for single vs double digits
+    <h1>Time to Next Lunch Order</h1>
+    <br>
+    <h2>@days Days</h2>
+    <h2>@hours Hours</h2>
+    <h2>@minutes Minutes</h2>
+    <h2>@seconds Seconds</h2>
 }

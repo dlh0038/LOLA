@@ -16,6 +16,7 @@ namespace LOLA.Server.Data
         }
         public DbSet<Order> Orders {get; set;}
         public DbSet<User> Users {get; set;} //disabled users temporarily
+        public DbSet<Restaurant> Restaurants { get; set; }
 
         // protected override void OnModelCreating(ModelBuilder modelBuilder)
         // {
