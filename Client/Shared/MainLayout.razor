@@ -5,21 +5,28 @@
 
  @* authorizeview only allows authenticated users to view the website *@
 
- <AuthorizeView>
+
+
+ <AuthorizeView Roles="Admin, User">
     <Authorized>
+        <MudThemeProvider/>
+        <MudDialogProvider/>
+        <MudSnackbarProvider/>
             <div class="page">
                 <div class="sidebar">
                     <NavMenu />
                 </div>
-                <div class="main">
+
+                <main>
                     <div class="top-row">
                          <h4><b>@context.User.Identity.Name</b></h4>
                         <button class="btn btn-danger" @onclick="LogoutUser">Logout</button> 
                     </div>
+                    
                     <div class="content px-4">
                         @Body
                     </div>
-                </div>
+                </main>
             </div>
     </Authorized>
     <NotAuthorized>

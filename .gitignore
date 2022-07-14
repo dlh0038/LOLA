@@ -333,6 +333,7 @@ ASALocalRun/
 
 # sqlite
 *.db
+*.db-shm
 
 # Don't ignore server launchSettings.json. We need a specific port number for auth to work.
 !**/BlazingPizza.Server/Properties/launchSettings.json

@@ -35,13 +35,14 @@ namespace Server.Controllers
             {
                 System.Console.WriteLine("=======--------------------User Role = " + loggedInUser.Role);
                 //create a claim, claimsIdentity, claimsPrincipal,
+                //var claimID = new Claim(ClaimTypes.NameIdentifier, loggedInUser.Id.ToString());
                 var claim = new Claim(ClaimTypes.Name, loggedInUser.Email);
                 var claimRole = new Claim (ClaimTypes.Role, loggedInUser.Role == null ? "" : loggedInUser.Role); 
                 var claimsIdentity = new ClaimsIdentity(new[] { claim , claimRole }, "serverAuth");
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                 
-                await HttpContext.SignInAsync(claimsPrincipal);//Sign In User
-            }                                                  //default scheme for signing in
+                await HttpContext.SignInAsync(claimsPrincipal);
+            }                                                  
             else
             {
                 return BadRequest();
@@ -49,12 +50,11 @@ namespace Server.Controllers
             return await Task.FromResult(loggedInUser);
         }
 
-//get user
         [HttpGet("getcurrentuser")] 
         public async Task<ActionResult<User>> GetCurrentUser()
         {
             User currentUser = new User();
-            //if true 
+            // user is refereneced from System.Security.Claims 
             if (User.Identity.IsAuthenticated)
             {
                 //The claim value for the first claim with the specified type;
@@ -65,7 +65,6 @@ namespace Server.Controllers
             return await Task.FromResult(currentUser);                     
         }
 
-//Logout user
         [HttpGet("logoutuser")]
         public async Task<ActionResult<String>> LogOutUser()
         {
@@ -76,15 +75,12 @@ namespace Server.Controllers
 //##############################################################################################
 // ADMIN METHODS for creating deleting and editing users
 //##############################################################################################
-// get all users from the server
         [HttpGet("getallusers")]
         public ActionResult<List<User>> GetAllUsers()
         {
             return _dataContext.Users.ToList();
         }
 
-// get a single user
-// parameter  ID
         [HttpGet("{id}")]
         public ActionResult<User> GetUserById(int id)
         {
@@ -114,7 +110,6 @@ namespace Server.Controllers
 
         }
 
-// delete user from server
         [HttpDelete("{id}")]
         public void DeleteUser(int id)
         {
