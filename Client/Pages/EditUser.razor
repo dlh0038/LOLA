@@ -12,16 +12,11 @@
                 <input type="text" @bind-value="newUser.Name" class="form-control mb-3" placeholder="Name">
                 <input type="email" @bind-value="newUser.Email" class="form-control mb-3" placeholder="Email"/>
                 <input type="text" @bind-value="newUser.Password" class="form-control mb-3" placeholder="Password">
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        @editpermissions
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" @onclick="AddAdminRole">Admin</a></li>
-                        <li><a class="dropdown-item" @onclick="AddUserRole">User</a></li>
-                    </ul>
-                </div>
+                
+                <MudSelect @bind-Value="@newUser.Role" Margin="Margin.Dense" Label="Edit Permissions" Variant="Variant.Outlined">
+                    <MudSelectItem Value="@("Admin")"> Admin </MudSelectItem>
+                    <MudSelectItem Value="@("User")"> User </MudSelectItem>
+                </MudSelect> 
 
                 <p style="color:red; font-size:20px">@errorMessage</p>
                 <button class="btn btn-block btn-primary" @onclick="SubmitUser">Submit</button>
@@ -81,10 +76,9 @@
     private User[]? users;
     private User newUser = new User();
     private string errorMessage = string.Empty;
-    private string editpermissions = "Edit Permissions";
     private bool edit = false;  // if true add user if false edit user
-    protected Confirm DeleteConfirmation { get; set; } // reference to show delete confirm
-    protected Confirm ConfirmDeleteClicked { get; set; }
+    protected Confirm? DeleteConfirmation { get; set; } // reference to show delete confirm
+    protected Confirm? ConfirmDeleteClicked { get; set; }
     protected int userid = 0;
 
 // getting all users
@@ -105,7 +99,6 @@
 // add or edit user 
     private async Task SubmitUser()
     {
-        editpermissions = "Edit Permissions";
         errorMessage = "";
         if(newUser.Email != null && newUser.Password != null && newUser.Role!= null &&  
            newUser.Email != "" && newUser.Password != "" && newUser.Role!= "")
@@ -134,7 +127,6 @@
 // used to set user back to empty if cancel is clicked
     private async Task Cancel()
     {
-        editpermissions = "Edit Permissions";
         edit = false;
         errorMessage = ""; 
         newUser = new User();
@@ -142,7 +134,7 @@
     }
 
 // delete user 
-    protected async void DeleteUser(int id, string email)
+    protected void DeleteUser(int id, string email)
     {
         userid = id;  // userid is local variable used to pass the id of user being deleted 
         Console.WriteLine("id = " + id.ToString());
@@ -156,22 +148,9 @@
             edit = false;
             Console.WriteLine("id = " + userid.ToString()); 
             await Http.DeleteAsync("user/"+userid.ToString());
-            editpermissions = "Edit Permissions";
             errorMessage = "";
             newUser = new User();
             await OnInitializedAsync();
         }
-    }
-
-//change role to either admin or user
-    protected async void AddAdminRole()
-    {
-        editpermissions = "Admin";
-        newUser.Role = "Admin";
-    }
-    protected async void AddUserRole()
-    {
-        editpermissions = "User";
-        newUser.Role = "User";
     }
 }

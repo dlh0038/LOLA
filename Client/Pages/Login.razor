@@ -28,27 +28,19 @@
     { 
         var loggingInUser = await _loginClient.LoginUser();
 
-
         if (loggingInUser.Email != null && loggingInUser.Password != null)  
         {
-            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();  //gets current user claims
+            //gets current user claims 
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();  
             var user = authState.User;
-
-            if(user.IsInRole("Admin"))
-                Console.WriteLine("I am Admin fear me!!");
-            else if (user.IsInRole("User"))
-                Console.WriteLine("I am user.");
-            else
-                Console.WriteLine("I do not have a role! ");
             
             System.Console.WriteLine("this should be true if user is authenticated: " + user.Identity.IsAuthenticated);
 
-            if(user.Identity.IsAuthenticated) // makes sure user is a valid user 
+            if(user.Identity.IsAuthenticated) 
             { 
                 System.Console.WriteLine("User identified");
-                // go to home page
                 _navigationManager.NavigateTo("/home", true); 
-            }
+            } 
         }
         else
         {

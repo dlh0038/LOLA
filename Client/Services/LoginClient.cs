@@ -23,6 +23,7 @@ namespace LOLA.Client.Services
 //calling the web api and returning a user 
         public async Task<User> LoginUser()
         {
+            //sending request to api
             var response = await _httpClient.PostAsJsonAsync("user/loginuser", this); 
             return  await response.Content.ReadFromJsonAsync<User>();  
         }
