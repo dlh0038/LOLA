@@ -35,7 +35,7 @@ namespace LOLA.Client
                 return new AuthenticationState(claimsPrincipal);
             }
             else
-                Console.WriteLine("User new claim");
+                Console.WriteLine("new user claim");
                 return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity())); 
         }
     }

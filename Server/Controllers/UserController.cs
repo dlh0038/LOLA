@@ -29,6 +29,7 @@ namespace Server.Controllers
         {
             System.Console.WriteLine("User has made it to controller");
             // checks if user is valid
+            // u is data in database, user is user trying to login
             User loggedInUser = await _dataContext.Users.Where(u => u.Email == user.Email && u.Password == user.Password).FirstOrDefaultAsync();
 
             if (loggedInUser != null)
