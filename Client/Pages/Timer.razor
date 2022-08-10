@@ -1,0 +1,68 @@
+@page "/timerr"
+
+<PageTitle>Timer</PageTitle>
+<div class="row">
+    <h3>Timer @TimerMinutes : @seconds</h3>
+</div>
+<button class="btn-success" @onclick="StartTimer">Start Timer</button>
+<button class=" btn-warning" @onclick="StopTimer">Stop Timer</button>
+<button class=" btn-secondary" @onclick="ResetTimer">Reset Timer</button>
+
+
+@code {
+
+    System.Timers.Timer timer = new System.Timers.Timer(10);
+    private int seconds = 60;
+    [Parameter]
+    public int TimerMinutes { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnTimeReset { get; set; }
+
+
+    private void StartTimer()
+    {
+        timer.Elapsed -= secondsDown;
+        timer.Elapsed += secondsDown;
+        timer.Start();
+    }
+
+
+    private void StopTimer()
+    {
+        timer.Stop();
+    }
+
+    private async Task ResetTimer(MouseEventArgs e)
+    {
+        timer.Stop();
+        seconds = 60;
+        await OnTimeReset.InvokeAsync(e);
+    }
+
+    public void secondsDown(Object source, System.Timers.ElapsedEventArgs e)
+    {
+        if (seconds > 0)
+        {
+            seconds -= 1;
+            InvokeAsync(StateHasChanged);
+        }
+        else
+        {
+
+            if (TimerMinutes > 0)
+            {
+                TimerMinutes -= 1;
+                seconds = 60;
+            }
+            else
+            {
+                timer.Enabled = false;
+                System.Console.Beep(10000,100);
+            }
+        }
+
+    }
+
+
+}

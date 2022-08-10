@@ -1,5 +1,59 @@
 @page "/viewlunchselector"
+@using LOLA.Shared;
+@inject HttpClient Http;
+@inject IJSRuntime jsRuntime;
 
 <PageTitle>View Lunch Selector Page</PageTitle>
 
 <h1>Lunch Selector Page</h1>
+
+
+<div class="row">
+    @if (restaurants == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <MudSimpleTable Hover="true" Style="overflow-x: auto;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Link</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var restaurant in restaurants)
+                {
+                    <tr>
+                        <td>@restaurant.Id</td>
+                        <td>@restaurant.Name</td>
+                        <td>@restaurant.PhoneNumber</td>
+                        <td> <button @onclick="@(()=>OpenLink(@restaurant.Link))">@restaurant.Link </button></td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </MudSimpleTable>
+    }
+</div>
+
+@code {
+    private Restaurant[]? restaurants;
+    protected override async Task OnInitializedAsync()
+    {
+        restaurants = await Http.GetFromJsonAsync<Restaurant[]>("restaurant/getallrestaurants");
+    }
+
+    public async Task OpenLink(string str)
+    {
+
+        string url = "https://" + str;
+        await jsRuntime.InvokeAsync<object>("open", url, "_blank");
+    }
+
+}

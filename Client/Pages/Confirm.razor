@@ -34,6 +34,7 @@ double checking if you want to delete the user*@
     protected bool ShowConfirmation { get; set; }
     public bool ConfirmDelete { get; set; }
     public string User { get; set; } 
+    public string Restaurant  { get; set; } 
 
     [Parameter]
     public string ConfirmationTitle { get; set; } = "Confirm Delete";
@@ -47,6 +48,14 @@ double checking if you want to delete the user*@
     public void Show(int id, string email)
     {
         User = email;
+        ShowConfirmation = true;
+        StateHasChanged();
+    }
+
+
+     public void Show(int id)
+    {
+        //Restaurant = id;
         ShowConfirmation = true;
         StateHasChanged();
     }

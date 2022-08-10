@@ -4,7 +4,9 @@
 @inject HttpClient _httpClient
 
  @* authorizeview only allows authenticated users to view the website *@
-
+<MudThemeProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
  <AuthorizeView>
     <Authorized>
             <div class="page">
@@ -12,10 +14,12 @@
                     <NavMenu />
                 </div>
                 <div class="main">
-                    <div class="top-row">
-                         <h4><b>@context.User.Identity.Name</b></h4>
-                        <button class="btn btn-danger" @onclick="LogoutUser">Logout</button> 
+                    <div style="background-color: blue;">
+                        <div style="float: left; "><MudAvatar Color="Color.Primary">@context.User.Identity.Name</MudAvatar></div>
+                        <button class="btn btn-danger"style="float: right; " @onclick="LogoutUser">Logout</button> 
                     </div>
+                    <br>
+                    <br>
                     <div class="content px-4">
                         @Body
                     </div>
@@ -31,6 +35,8 @@
 
 
 @code{
+
+    
     private async Task LogoutUser()
     {
         //logout user 

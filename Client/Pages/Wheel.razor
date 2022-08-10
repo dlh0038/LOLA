@@ -1,0 +1,65 @@
+@page "/wheelofrestaurants"
+@using LOLA.Shared;
+@using System;
+@inject HttpClient Http;
+@inject IJSRuntime jsRuntime;
+
+
+
+
+<PageTitle>Wheel</PageTitle>
+
+<h1>WHEEL</h1>
+
+
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Pick" style="width: 1000px;">Pick a Restaurant
+</MudButton>
+
+
+<div class="row" style="text-align: center;">
+    @if (visible == false)
+    {
+    }
+    else
+    {
+        <h2>@picked.Name</h2>
+        <h3>@picked.PhoneNumber</h3>
+        <td> <button @onclick="@(()=>OpenLink(@picked.Link))">@picked.Link </button></td>
+    }
+</div>
+
+
+
+@code {
+    private Restaurant[]? restaurants;
+    private bool visible;
+    private Restaurant picked;
+    protected override async Task OnInitializedAsync()
+    {
+        restaurants = await Http.GetFromJsonAsync<Restaurant[]>("restaurant/getallrestaurants");
+    }
+
+    public async Task OpenLink(string str)
+    {
+
+        string url = "https://" + str;
+        await jsRuntime.InvokeAsync<object>("open", url, "_blank");
+    }
+
+    public void Pick()
+    {
+        visible = false;
+
+        int size = restaurants.Count();
+
+        Random rand = new Random();
+
+        int pickIndex = rand.Next(0, size);
+
+        picked = restaurants[pickIndex];
+
+        visible = true;
+
+    }
+
+}

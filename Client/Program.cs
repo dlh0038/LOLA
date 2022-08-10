@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.AspNetCore.Components.Authorization;
 using LOLA.Client.Services;
 using LOLA.Client;
-// using MudBlazor.Services;
+using MudBlazor.Services;
+
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -20,7 +21,9 @@ builder.Services.AddHttpClient<ILoginClient, LoginClient>
 
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 
-// builder.Services.AddMudServices(); // mudblazor
+//builder.Services.AddTelerikBlazor();
+
+builder.Services.AddMudServices();
 
 //################################################################################
 

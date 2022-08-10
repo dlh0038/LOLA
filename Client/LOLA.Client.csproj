@@ -8,11 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="7.0.0-preview.5.22303.8" />
-    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.7" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.6" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.7" PrivateAssets="all" />
+    <PackageReference Include="MudBlazor" Version="6.0.14" />
     <!-- <PackageReference Include="MudBlazor" Version="6.0.11" /> -->
     <!-- <PackageReference Include="Telerik.UI.for.Blazor" Version="3.1.0" /> -->
   </ItemGroup>

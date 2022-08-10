@@ -11,13 +11,13 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LOLA.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220706185643_datacontext")]
-    partial class datacontext
+    [Migration("20220808145730_update")]
+    partial class update
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "6.0.6");
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.7");
 
             modelBuilder.Entity("LOLA.Shared.Order", b =>
                 {
@@ -41,6 +41,29 @@ namespace LOLA.Server.Migrations
                     b.ToTable("Orders");
                 });
 
+            modelBuilder.Entity("LOLA.Shared.Restaurant", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Restaurants");
+                });
+
             modelBuilder.Entity("LOLA.Shared.User", b =>
                 {
                     b.Property<int>("Id")
@@ -54,6 +77,9 @@ namespace LOLA.Server.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Role")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
