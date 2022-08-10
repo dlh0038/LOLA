@@ -1,11 +1,11 @@
-@page "/viewlunchselector"
+@page "/viewrestaurants"
 @using LOLA.Shared;
 @inject HttpClient Http;
 @inject IJSRuntime jsRuntime;
 
-<PageTitle>View Lunch Selector Page</PageTitle>
+<PageTitle>Restaurants</PageTitle>
 
-<h1>Lunch Selector Page</h1>
+<h1>Restaurants</h1>
 
 
 <div class="row">
@@ -21,6 +21,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Phone</th>
+                    <th>Rating</th>
                     <th>Link</th>
 
                 </tr>
@@ -32,6 +33,7 @@
                         <td>@restaurant.Id</td>
                         <td>@restaurant.Name</td>
                         <td>@restaurant.PhoneNumber</td>
+                        <td><MudRating ReadOnly = "true" SelectedValue = "@restaurant.Rating"></MudRating></td>
                         <td> <button @onclick="@(()=>OpenLink(@restaurant.Link))">@restaurant.Link </button></td>
 
 
