@@ -14,14 +14,10 @@
                 <input type="text" @bind-value="newRestaurant.PhoneNumber" class="form-control mb-3"
                     placeholder="Number:" />
                 <input type="text" @bind-value="newRestaurant.Link" class="form-control mb-3" placeholder="link">
+                <input type="text" @bind-value="newRestaurant.Rating" class="form-control mb-3" placeholder="Initial Rating">
 
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
 
-                    </button>
-
-                </div>
+               
 
                 <p style="color:red; font-size:20px">@errorMessage</p>
                 <button class="btn btn-block btn-primary" @onclick="SubmitRestaurant">Submit</button>
@@ -40,6 +36,7 @@
                                 <th>Name</th>
                                 <th>Phone</th>
                                 <th>Link</th>
+                                <th>Rating</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
@@ -130,7 +127,7 @@
         }
     }
 
-    // used to set Restaurant back to empty if cancel is clicked
+    // used to reset Restaurant back to empty if cancel is clicked
     private async Task Cancel()
     {
 
@@ -162,7 +159,7 @@
             await OnInitializedAsync();
         }
     }
-
+    //helper method to open link in new tab
     public async Task OpenLink(string str)
     {
 
