@@ -35,8 +35,8 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Phone</th>
-                                <th>Link</th>
                                 <th>Rating</th>
+                                <th>Link</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
@@ -47,6 +47,7 @@
                                     <td>@restaurant.Id</td>
                                     <td>@restaurant.Name</td>
                                     <td>@restaurant.PhoneNumber</td>
+                                     <td>@restaurant.Rating</td>
                                     <td> <button @onclick="@(()=>OpenLink(@restaurant.Link))">@restaurant.Link </button></td>
 
                                     @* <td>
