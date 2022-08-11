@@ -1,5 +1,57 @@
 @page "/startlunchorder"
+@using LOLA.Shared;
+@using System;
+@inject HttpClient Http;
+@inject IJSRuntime jsRuntime;
 
 <PageTitle>Start Lunch Order Page</PageTitle>
 
 <h1>Start Lunch Order Page</h1>
+<br>
+<br>
+<br>
+<br>
+
+ @if (restaurants == null && users == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+
+<h2>Select restaurant to order from:</h2>
+<MudSelect T="string" Label="Restaurant" Variant="Variant.Outlined"
+    AnchorOrigin="Origin.BottomCenter">
+   
+       @foreach (var restaurant in restaurants)
+    {
+        <MudSelectItem Value="@restaurant.Name" />
+    }
+
+    
+    
+
+</MudSelect>
+<br>
+<br>
+<h2>Select participants:</h2>
+@for (int i = 0; i < users.Count(); i++)
+    {
+        <MudCheckBox @bind-Checked="@OnOrder[i]" Label="@users[i].Name"></MudCheckBox>
+    }
+    }
+   
+
+@code {
+     private Restaurant[]? restaurants;
+     private User[]? users;
+     private bool[] OnOrder;
+    protected override async Task OnInitializedAsync()
+    {
+        users = await Http.GetFromJsonAsync<User[]>("user/getallusers");
+        restaurants = await Http.GetFromJsonAsync<Restaurant[]>("restaurant/getallrestaurants");
+            OnOrder = new bool[users.Count()];
+        //string test = users.Where<Id == @context.User.Identity.Name>;
+        
+    }
+}

@@ -7,13 +7,15 @@
 
 
 
-<PageTitle>Wheel</PageTitle>
+<PageTitle>Randomizer</PageTitle>
 
-<h1>WHEEL</h1>
+<h1>Get a Random Restaurant</h1>
 
 
 <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Pick" style="width: 1000px;">Pick a Restaurant
 </MudButton>
+
+
 
 
 <div class="row" style="text-align: center;">
@@ -24,9 +26,15 @@
     {
         <h2>@picked.Name</h2>
         <h3>@picked.PhoneNumber</h3>
-        <td> <button @onclick="@(()=>OpenLink(@picked.Link))">@picked.Link </button></td>
+        <td><button @onclick="@(()=>OpenLink(@picked.Link))">@picked.Link </button></td>
     }
 </div>
+
+
+
+
+
+
 
 
 
@@ -34,9 +42,14 @@
     private Restaurant[]? restaurants;
     private bool visible;
     private Restaurant picked;
+
+  
+
+    private double degrees;
     protected override async Task OnInitializedAsync()
     {
         restaurants = await Http.GetFromJsonAsync<Restaurant[]>("restaurant/getallrestaurants");
+     
     }
 
     public async Task OpenLink(string str)
