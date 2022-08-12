@@ -1,57 +1,145 @@
 @page "/startlunchorder"
 @using LOLA.Shared;
 @using System;
+@using System.Security.Claims;
 @inject HttpClient Http;
 @inject IJSRuntime jsRuntime;
+@inject AuthenticationStateProvider GetAuthenticationStateAsync;
+
 
 <PageTitle>Start Lunch Order Page</PageTitle>
 
-<h1>Start Lunch Order Page</h1>
+<h1>Hello @CurUserName !</h1>
 <br>
 <br>
 <br>
 <br>
 
- @if (restaurants == null && users == null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
+@if (restaurants == null && users == null && OnOrder == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
 
-<h2>Select restaurant to order from:</h2>
-<MudSelect T="string" Label="Restaurant" Variant="Variant.Outlined"
-    AnchorOrigin="Origin.BottomCenter">
-   
-       @foreach (var restaurant in restaurants)
+    <h2>Select restaurant to order from:</h2>
+    <MudSelect T="string" Label="Restaurant" Variant="Variant.Outlined" AnchorOrigin="Origin.BottomCenter" @bind-Value ="CurrentRestaurant">
+
+        @foreach (var restaurant in restaurants)
+        {
+            <MudSelectItem Value="@restaurant.Name" />
+        }
+
+
+
+
+    </MudSelect>
+    <br>
+    <br>
+    <h2>Select participants:</h2>
+    @for (int i = 0; i < users.Count(); i++)
     {
-        <MudSelectItem Value="@restaurant.Name" />
+        var local = i;
+        <MudCheckBox @bind-Checked="@OnOrder[local]" Label="@users[i].Name"></MudCheckBox>
     }
 
-    
-    
+    // <MudButton Variant="Variant.Filled" OnClick="Confirm">Confirm</MudButton>
 
-</MudSelect>
-<br>
-<br>
-<h2>Select participants:</h2>
-@for (int i = 0; i < users.Count(); i++)
+}
+
+@if (restaurants == null && users == null && OnOrder == null)
+{
+    <p><em>Loading...</em></p>
+}
+else{
+@for (int i = 0; i < users.Count(); i++){
+     var local = i;
+
+     
+    if (OnOrder[local])
     {
-        <MudCheckBox @bind-Checked="@OnOrder[i]" Label="@users[i].Name"></MudCheckBox>
+        <h2>@users[local].Name : </h2>
+        <MudTextField @bind-Value="TextValue[local]" Label="Order" Variant="Variant.Outlined"></MudTextField>
     }
-    }
-   
+     
+}
+}
+
+<MudButton Variant="Variant.Filled" OnClick="Confirm">Submit Order</MudButton>
+
+
 
 @code {
-     private Restaurant[]? restaurants;
-     private User[]? users;
-     private bool[] OnOrder;
+    private Restaurant[]? restaurants { get; set; }
+
+    private string CurrentRestaurant;
+    private User[]? users { get; set; }
+    public bool[]? OnOrder { get; set; }
+    public string[]? TextValue { get; set; }
+    public string CurUserId;
+    public string CurUserName;
+
+    private Order NewOrder = new Order();
+
     protected override async Task OnInitializedAsync()
     {
         users = await Http.GetFromJsonAsync<User[]>("user/getallusers");
         restaurants = await Http.GetFromJsonAsync<Restaurant[]>("restaurant/getallrestaurants");
-            OnOrder = new bool[users.Count()];
+        //arr to store which users are part of order
+        OnOrder = new bool[users.Count()];
+        //arr to store each users order info
+        TextValue = new string[users.Count()];
+
+        //authstate to get user and user email (Identity.Name is User.Email not User.Name)
+        var authstate = await GetAuthenticationStateAsync.GetAuthenticationStateAsync();
+        var user = authstate.User;
+        var name = user.Identity.Name;
+
+        //get user id and name based on email from authstate
+        CurUserId = users.Where(x=>x.Email == name).FirstOrDefault().Id.ToString();
+        CurUserName = users.Where(x=>x.Email == name).FirstOrDefault().Name;
+
         //string test = users.Where<Id == @context.User.Identity.Name>;
-        
+
     }
-}
+
+    public async Task Confirm()
+    {
+        string AllInfo = "";
+        AllInfo += "Order Submitter: " + CurUserName + "\n";
+
+        for (int i = 0; i < users.Count(); i++)
+        {
+            if(OnOrder[i]){
+                AllInfo += users[i].Name + ": " + TextValue[i] + " \n";
+            }
+        }
+
+        NewOrder.Restaurant = restaurants.Where(x=>x.Name == CurrentRestaurant).FirstOrDefault();
+        NewOrder.User = users.Where(x=>x.Email == CurUserName).FirstOrDefault();
+        NewOrder.OrderText = AllInfo;
+        NewOrder.OrderTotal = 100;
+
+        
+
+       string errorMessage = "";
+        if (NewOrder.OrderText != null)
+        {
+            
+            
+                await Http.PostAsJsonAsync<Order>("Order/postorder", NewOrder);
+                await OnInitializedAsync();
+                NewOrder = new Order();
+            
+            
+        }
+        else
+        {
+            errorMessage = "Cannot be null";
+        }
+    
+
+
+    }
+       
+    }
