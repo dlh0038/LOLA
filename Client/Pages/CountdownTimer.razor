@@ -1,0 +1,12 @@
+@page "/countdowntimer"
+<h1>TEST</h1>
+<Timer TimerMinutes="TotalMinutes" OnTimeReset="OnResetHandler"></Timer>
+
+@code{
+
+public int TotalMinutes = 10;
+public void OnResetHandler(MouseEventArgs e)
+    {
+      
+    }
+}

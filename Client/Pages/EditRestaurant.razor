@@ -1,0 +1,173 @@
+@page "/editrest"
+@using LOLA.Shared;
+@inject HttpClient Http;
+@inject IJSRuntime jsRuntime;
+
+
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        <h1>Add a New Restaurant</h1>
+
+        <div class="row">
+            <div class="col col-6">
+                <input type="text" @bind-value="newRestaurant.Name" class="form-control mb-3" placeholder="Name">
+                <input type="text" @bind-value="newRestaurant.PhoneNumber" class="form-control mb-3"
+                    placeholder="Number:" />
+                <input type="text" @bind-value="newRestaurant.Link" class="form-control mb-3" placeholder="link">
+                <input type="text" @bind-value="newRestaurant.Rating" class="form-control mb-3" placeholder="Initial Rating">
+
+
+               
+
+                <p style="color:red; font-size:20px">@errorMessage</p>
+                <button class="btn btn-block btn-primary" @onclick="SubmitRestaurant">Submit</button>
+                <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+
+                @if (restaurants == null)
+                {
+                    <p><em>Loading...</em></p>
+                }
+                else
+                {
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Rating</th>
+                                <th>Link</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var restaurant in restaurants)
+                            {
+                                <tr>
+                                    <td>@restaurant.Id</td>
+                                    <td>@restaurant.Name</td>
+                                    <td>@restaurant.PhoneNumber</td>
+                                     <td>@restaurant.Rating</td>
+                                    <td> <button @onclick="@(()=>OpenLink(@restaurant.Link))">@restaurant.Link </button></td>
+
+                                    @* <td>
+                                        <button @onclick="@(()=>GetRestaurantById(@restaurant.Id))" class="btn btn-sm btn-primary"
+                                        >Edit</button>
+                                        </td> *@
+                                    <td>
+                                        <button @onclick="@(()=>DeleteRestaurant(@restaurant.Id))"
+                                    class="btn btn-sm btn-primary">Delete</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+
+        @* when delete is clicked this confirm modal will popup*@
+        <Confirm ConfirmationChanged="ConfirmDelete_Click" @ref="DeleteConfirmation"></Confirm> 
+    </Authorized>
+    <NotAuthorized>
+        <h3>Not authorized</h3>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    #nullable enable
+    private Restaurant[]? restaurants;
+
+    private Restaurant newRestaurant = new Restaurant();
+    private string errorMessage = string.Empty;
+    private bool edit = false; // if true add Restaurant if false edit Restaurant
+    protected Confirm DeleteConfirmation { get; set; } // reference to show delete confirm
+    protected Confirm ConfirmDeleteClicked { get; set; }
+    protected int restaurantId = 0;
+
+    // getting all Restaurants
+    //the OnInitialexAsync is used to handle incomplete async actions at render
+    protected override async Task OnInitializedAsync()
+    {
+        restaurants = await Http.GetFromJsonAsync<Restaurant[]>("restaurant/getallrestaurants");
+    }
+
+    //get Restaurant id to edit Restaurant
+    private async Task GetRestaurantById(int id)
+    {
+        errorMessage = "";
+        newRestaurant = await Http.GetFromJsonAsync<Restaurant>("restaurant/" + id.ToString());
+        edit = true;
+    }
+
+    // add or edit Restaurant
+    private async Task SubmitRestaurant()
+    {
+
+        errorMessage = "";
+        if (newRestaurant.Name != null)
+        {
+            if (edit == false)
+            {
+                await Http.PostAsJsonAsync<Restaurant>("restaurant/postrestaurant", newRestaurant);
+                await OnInitializedAsync();
+                newRestaurant = new Restaurant();
+            }
+            else
+            {
+
+                await Http.PutAsJsonAsync<Restaurant>("Restaurant/" + newRestaurant.Id, newRestaurant);
+                await OnInitializedAsync();
+                edit = false;
+                newRestaurant = new Restaurant();
+            }
+        }
+        else
+        {
+            errorMessage = "Email, Password and Permissions Required!";
+        }
+    }
+
+    // used to reset Restaurant back to empty if cancel is clicked
+    private async Task Cancel()
+    {
+
+        edit = false;
+        errorMessage = "";
+        newRestaurant = new Restaurant();
+        await OnInitializedAsync();
+    }
+
+    // delete Restaurant
+    protected async void DeleteRestaurant(int id)
+    {
+        // Restaurantid is local variable used to pass the id of Restaurant being deleted
+        restaurantId = id;
+        Console.WriteLine(" Inside Delete: id = " + id.ToString());
+        DeleteConfirmation.Show(id);
+    }
+
+    protected async Task ConfirmDelete_Click(bool deleteConfirmed)
+    {
+        if (deleteConfirmed)
+        {
+            edit = false;
+            Console.WriteLine(" Inside Confirm Deleteid = " + restaurantId.ToString());
+            await Http.DeleteAsync("Restaurant/" + restaurantId.ToString());
+
+            errorMessage = "";
+            newRestaurant = new Restaurant();
+            await OnInitializedAsync();
+        }
+    }
+    //helper method to open link in new tab
+    public async Task OpenLink(string str)
+    {
+
+        string url = "https://" + str;
+        await jsRuntime.InvokeAsync<object>("open", url, "_blank");
+    }
+
+
+
+}

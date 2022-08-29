@@ -1,5 +1,6 @@
 @page "/"
 @using LOLA.Shared
+@using MudBlazor
 @layout LoginLayout
 @inject HttpClient Http
 @using LOLA.Client.Services
@@ -7,16 +8,35 @@
 @inject NavigationManager _navigationManager
 @inject AuthenticationStateProvider AuthenticationStateProvider 
 
+<style>
+    .parent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    body {
+        background-image: linear-gradient(180deg, rgb(0, 72, 186) 0%, rgb(201, 255, 229) 70%);
+        background-attachment: fixed;
+    }
+</style>
+
+
 <h2>Login</h2>
+
+
  
-<div class="row">
+<div  class="row parent" >
     <div class="col col-6">
         <input type="email" @bind-value="_loginClient.Email" class="form-control mb-3" placeholder="Email"/>
         <input type="password" @bind-value="_loginClient.Password" class="form-control mb-3" placeholder="Password"/>
         <p style="color:red; font-size:20px">@authMessage</p>
-        <button class="btn btn-block btn-primary" @onclick="LoginUser">Login</button>
+        <MudButton Variant = "Variant.Filled" Color = "Color.Secondary"  @onclick="LoginUser">Login</MudButton>
+       
     </div>
 </div>
+
+
+
 
 @code
 {

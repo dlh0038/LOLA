@@ -16,7 +16,8 @@ namespace LOLA.Server.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: true),
                     Email = table.Column<string>(type: "TEXT", nullable: true),
-                    Password = table.Column<string>(type: "TEXT", nullable: true)
+                    Password = table.Column<string>(type: "TEXT", nullable: true),
+                    Role = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

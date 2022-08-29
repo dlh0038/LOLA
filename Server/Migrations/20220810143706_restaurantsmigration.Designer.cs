@@ -3,6 +3,7 @@ using System;
 using LOLA.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LOLA.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220810143706_restaurantsmigration")]
+    partial class restaurantsmigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.7");
@@ -29,15 +31,10 @@ namespace LOLA.Server.Migrations
                     b.Property<double>("OrderTotal")
                         .HasColumnType("REAL");
 
-                    b.Property<int?>("RestaurantId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int?>("UserId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("RestaurantId");
 
                     b.HasIndex("UserId");
 
@@ -92,15 +89,9 @@ namespace LOLA.Server.Migrations
 
             modelBuilder.Entity("LOLA.Shared.Order", b =>
                 {
-                    b.HasOne("LOLA.Shared.Restaurant", "Restaurant")
-                        .WithMany()
-                        .HasForeignKey("RestaurantId");
-
                     b.HasOne("LOLA.Shared.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
-
-                    b.Navigation("Restaurant");
 
                     b.Navigation("User");
                 });

@@ -15,12 +15,15 @@ namespace LOLA.Server.Data
 
         }
         public DbSet<Order> Orders {get; set;}
-        public DbSet<User> Users {get; set;} //disabled users temporarily
+        public DbSet<User> Users {get; set;}
+        
+        public DbSet<Restaurant> Restaurants {get; set;}
+         //disabled users temporarily
 
         // protected override void OnModelCreating(ModelBuilder modelBuilder)
         // {
-        //     modelBuilder.Entity<Order>().ToTable(nameof(Order));
-        //     modelBuilder.Entity<User>().ToTable(nameof(Users)).HasMany(c => c.Order);
+            
+            
         // }
     }
 }
